@@ -23,7 +23,7 @@ int iddrona;
 
 Vector<3> droga;
 
-double promien=40;
+double promien=20;
 Vector<3> dwojka;
 
 Vector<3> srodekD;
@@ -54,7 +54,7 @@ Vector<3> wspolrzedne();
 
 bool czy_kolizja(shared_ptr <Przeszkody> p);
 
-    void get_srodek() const ;
+    Vector<3> get_srodek() ;
     
 
 };

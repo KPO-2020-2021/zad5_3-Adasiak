@@ -18,6 +18,7 @@ public:
     Vector<3> srodek_prostopadloscianu;
 
     Vector<3> wez_srodek();
+    double wez_promien(){return bpromien;}
 };
 
 

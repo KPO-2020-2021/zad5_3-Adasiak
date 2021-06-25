@@ -287,26 +287,18 @@ bool Dron::czy_kolizja(std::shared_ptr<Przeszkody> p)
 {
 
   Vector<3> srodek_Drona;
+  srodek_Drona=get_srodek();
 
-  if (iddrona == 1)
-  {
-    srodek_Drona = /*korpus->srodek_prostopadloscianu*/ droga;
-  }
-  if (iddrona == 2)
-  {
-    srodek_Drona = /*korpus->srodek_prostopadloscianu*/ dwojka;
-  }
-  // if()
   Vector<3> srodek_Obiektu ;
   srodek_Obiektu = p->wez_srodek();
 
 
   double l = sqrt(pow(srodek_Drona[0] - srodek_Obiektu[0], 2) + pow(srodek_Drona[1] - srodek_Obiektu[1], 2) + pow(srodek_Drona[2] - srodek_Obiektu[2], 2));
 
-  // std::cout << "l" << srodek_Obiektu << std::endl;
-  // std::cout << "pppppp" << p->promien() << std::endl;
+  // std::cout << "l" << srodek_Drona << std::endl;
+  // std::cout << "pppppp" << p->wez_promien() << std::endl;
 
-  if (promien + /*p->promien()*/50 >= l)
+  if (promien + p->wez_promien() >= l)
   {
     return true;
   }
@@ -386,6 +378,7 @@ void Dron::AnimacjaLotuDrona(list<std::shared_ptr<Przeszkody>> &p, PzG::LaczeDoG
       }
 
       // KatOr_st -= 5;
+      bool mpower=false;
 for(int i=0;i<k;i++){
       //-------------------------------------
       // Lot do przodu ...
@@ -526,56 +519,128 @@ for(int i=0;i<k;i++){
             }
             if(qq==2)
             {
-
-                Vector<3> wznoszenie;
-                wznoszenie[2] = 2;
-                cout << endl
-                    << "Wznoszenie ... " << endl;
-                for (; z_dron <= 120; z_dron += 2)
+                  double pomz;
+                   if(iddrona==1){
+                      pomz=Dron::droga[2];
+                    }
+                    if(iddrona==2){
+                      pomz=Dron::dwojka[2];
+                    }
+                while(pomz>2) 
                 {
-                  ruch(wznoszenie, 0, 0);
-                  // if (!PrzemiescDrona(KatOr_st,x_dron,y_dron,z_dron))
-                  //     return false;
-                  usleep(100000); // 0.1 ms
-                  Lacze.Rysuj();
+                      if(iddrona==1){
+                          z_dron=Dron::droga[2];
+                        }
+                        if(iddrona==2){
+                          z_dron=Dron::dwojka[2];
+                        }
+
+                        x_dron=y_dron=20;
+
+                      Vector<3> wznoszenie;
+                      wznoszenie[2] = 2;
+                      cout << endl
+                          << "Autpilot pracuje ...." << endl;
+                      for (; z_dron <= 120; z_dron += 2)
+                      {
+                        ruch(wznoszenie, 0, 0);
+                        // if (!PrzemiescDrona(KatOr_st,x_dron,y_dron,z_dron))
+                        //     return false;
+                        usleep(100000); // 0.1 ms
+                        Lacze.Rysuj();
+                      }
+
+                      z_dron -= 2;
+
+                      double x, y;
+                      double q, w;
+                      if (iddrona == 1)
+                      {
+                        q = rand() % -20 + 20;
+                        w = rand() % -20 + 20;
+                      }
+                      if (iddrona == 2)
+                      {
+                        q = rand() % -20 + 20;
+                        w = rand() % -20 + 20;
+                      }
+
+                      x =  q / 50;
+                      y = w / 50;
+                      Vector<3> lot;
+                      lot[0] = x;
+                      lot[1] = y;
+                      // cout << "Lot do przodu ... " << endl;
+                      for (; (y_dron <= 50); x_dron += 1, y_dron += 1)
+                      {
+
+                        ruch(lot, 0, 0);
+
+                        usleep(100000);
+                        Lacze.Rysuj();
+                      }
+                      x_dron -= 1, y_dron -= 1;
+
+                                    //-------------------------------------
+                        // Opadanie ...
+                        //
+                        Vector<3> opadanie;
+                        opadanie[2] = -2;
+                        // std::cout << "Opadanie ... " << endl;
+
+                        bool kolizja = false;
+
+                        for (; z_dron >= 0; z_dron -= 2)
+                        {
+                          auto a = p.cbegin();
+
+                          for (unsigned int i = 0; i < p.size(); i++)
+                          {
+
+                            if (czy_kolizja(*a))
+                            {
+                              // std::cout << a <<std::endl;
+                              // std::cout << (*a)->get_nazwa() << endl;
+                              kolizja = true;
+                              // std::cout << kolizja << std::endl;
+                            }
+                            a++;
+                          }
+
+                          if (kolizja == true)
+                          {
+                            std::cout << "kolizja " << std::endl;
+                            k=k+1;
+                            break;
+                          }
+                          if(kolizja==false){
+                          ruch(opadanie, 0, 0);
+                          }
+                          kolizja = false;
+
+                          usleep(100000); // 0.1 ms
+                          Lacze.Rysuj();
+                        }
+                         if(iddrona==1){
+                          pomz=Dron::droga[2];
+                        }
+                        if(iddrona==2){
+                          pomz=Dron::dwojka[2];
+                        }
+                        
                 }
-
-                z_dron -= 2;
-
-                double x, y;
-                double q, w;
-                if (iddrona == 1)
-                {
-                  q = 30;
-                  w = 30;
-                }
-                if (iddrona == 2)
-                {
-                  q = 30;
-                  w = 30;
-                }
-
-                x =  q / 50;
-                y = w / 50;
-                Vector<3> lot;
-                lot[0] = x;
-                lot[1] = y;
-                cout << "Lot do przodu ... " << endl;
-                for (; (y_dron <= 50); x_dron += 1, y_dron += 1)
-                {
-
-                  ruch(lot, 0, 0);
-
-                  usleep(100000);
-                  Lacze.Rysuj();
-                }
-                x_dron -= 1, y_dron -= 1;
+                std::cout<<"Udalo sie wyladowac"<<std::endl;
+                mpower=true;
+                 if(mpower==true){
+                   break;
+                 }
             }
     }
     
     //-------------------------------------
     // Opadanie ...
     //
+    
     Vector<3> opadanie;
     opadanie[2] = -2;
     std::cout << "Opadanie ... " << endl;
@@ -813,4 +878,24 @@ void Dron::zwiad2(PzG::LaczeDoGNUPlota &Lacze, double promien)
   }
 
   //   return true;
+}
+
+
+
+/*!       
+    \brief
+    get_srodek
+    funkcja ustala srodek korpusu drona
+*/
+
+Vector<3> Dron::get_srodek()
+{
+  Vector<3> pom;
+  if(iddrona==1){
+    pom=korpus->wez_srodek()+Dron::droga;
+  }
+  if(iddrona==2){
+    pom=korpus1->wez_srodek()+Dron::dwojka;
+  }
+  return pom;
 }

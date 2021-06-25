@@ -59,7 +59,9 @@ Ostroslup::Ostroslup(Vector<3> pkt, double dlugosc ,double szerokosc, double wys
 /*------------------------------------------*/
     this->srodek=this->srodek+pkt;
     set_srodek(pkt);
-    
+
+        // opromien=sqrt(pow(pkt1[4][0]-pkt[0],2) + pow(pkt1[4][1]-pkt[1],2)+pow(pkt1[4][2]-pkt[2],2));
+            opromien=wysokosc;    
  ofstream plik;
         plik.open(nazwa_pliku);
     for(int i=0; i<(int)pkt1.size(); i++)

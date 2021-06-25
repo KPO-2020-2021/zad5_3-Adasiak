@@ -84,7 +84,10 @@ Gran::Gran(Vector<3> pkt, double dlugosc ,double szerokosc, double wysokosc, str
     pkt1[18][2] += wysokosc;
 /*------------------------------------------*/
 
-     BrylaGeometryczna::srodek=pkt;
+    //  BrylaGeometryczna::srodek=pkt;
+    set_srodek(pkt);
+    
+    gpromien=sqrt(pow(pkt1[3][0]-pkt[0],2) + pow(pkt1[3][1]-pkt[1],2)+pow(pkt1[3][2]-pkt[2],2));
 
 
  ofstream plik;

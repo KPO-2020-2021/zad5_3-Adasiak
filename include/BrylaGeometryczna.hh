@@ -18,7 +18,7 @@ protected:
     double katOZ; // obrot do okola osi Z
     double katOY; // kat wznoszenia i opadania
     double katOX; // kat rotacji np. wirnikow
-
+    double bpromien;
 public:
     Vector<3> operator[](int Ind) const { return pkt1[Ind]; } //wypisywanie
     Vector<3> &operator[](int Ind) { return pkt1[Ind]; } //wpisywanie
@@ -59,7 +59,8 @@ public:
     bool czy_kolizja(std::shared_ptr <Przeszkody> &p);
 
     // bool czy_kolizja(std::shared_ptr <Przeszkody> p) const;
-
+     double wez_promien(){return bpromien;}
+     
     void set_srodek(Vector<3> srodek);
         // string nazwa(){ return nazwa_pliku_do_zapisu;}
 

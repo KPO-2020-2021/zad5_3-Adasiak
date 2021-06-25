@@ -157,7 +157,7 @@ int main()
 
        PzG::LaczeDoGNUPlota Lacze; // Ta zmienna jest potrzebna do wizualizacji
                                    // rysunku Prostopadlosciana
-
+       
        //-------------------------------------------------------
        //  Wspolrzedne wierzcholkow beda zapisywane w pliku "Prostopadloscian.dat"
        //  Ponizsze metody powoduja, ze dane z pliku beda wizualizowane

@@ -19,5 +19,6 @@ public:
     virtual void zapis()=0;
     virtual Vector<3> wez_srodek() =0 ;
     virtual double promien()=0;
+    virtual double wez_promien()=0;
 };
 

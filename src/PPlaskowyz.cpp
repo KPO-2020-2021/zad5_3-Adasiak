@@ -54,6 +54,9 @@ PPlaskowyz::PPlaskowyz(Vector<3> pkt, double h, double w, double d, string nazwa
         pom[2]=pkt[2];
 
         this->srodek=pom;
+        set_srodek(pom);
+
+        ppromien=sqrt(pow(pkt1[4][0]-pom[0],2) + pow(pkt1[4][1]-pom[1],2)+pow(pkt1[4][2]-pom[2],2));
 //     pkt1[1][0] -= h/2;
 //     pkt1[1][1] -= w/2;
 

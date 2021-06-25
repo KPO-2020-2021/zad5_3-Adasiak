@@ -48,6 +48,15 @@ Prostopadloscian::Prostopadloscian(Vector<3> pkt, double h, double w, double d, 
     srodek_prostopadloscianu[0]=(pkt1[3][0]-pkt1[0][0])/2;
     srodek_prostopadloscianu[1]=(pkt1[3][1]-pkt1[0][1])/2;
     srodek_prostopadloscianu[2]=pkt1[0][2];
+
+
+        Vector<3> pom;
+        pom[0]=pkt[0]+h/2;
+        pom[1]=pkt[1]+w/2;
+        pom[2]=pkt[2];
+
+        this->srodek=pom;
+        set_srodek(pom);
     
 /*-----------------------------------------------*/
 

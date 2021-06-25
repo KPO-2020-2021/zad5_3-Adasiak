@@ -11,13 +11,14 @@ using namespace std;
 class PPlaskowyz : public BrylaGeometryczna
 {
   
-
+double ppromien;
 public:
     PPlaskowyz(){};
 
     PPlaskowyz(Vector<3> pkt, double h, double w, double d, string nazwa_pliku, string nazwa_pliku_do_zapisu);
     
       Vector<3> wez_srodek();
+      double wez_promien(){return ppromien;}
 };
 
 
