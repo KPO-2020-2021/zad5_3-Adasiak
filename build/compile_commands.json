@@ -1,0 +1,67 @@
+[
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/example.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/example.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/example.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/lacze_do_gnuplota.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/lacze_do_gnuplota.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/lacze_do_gnuplota.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/Prostopadloscian.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Prostopadloscian.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Prostopadloscian.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/BrylaGeometryczna.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/BrylaGeometryczna.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/BrylaGeometryczna.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/Graniastoslup6.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Graniastoslup6.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Graniastoslup6.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/Dron.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Dron.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Dron.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/matrix3x3.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/matrix3x3.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/matrix3x3.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/Scena.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Scena.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Scena.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/Ostroslup.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Ostroslup.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Ostroslup.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/Gran.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Gran.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/Gran.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/engine.dir/src/PPlaskowyz.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/PPlaskowyz.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/src/PPlaskowyz.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/main.dir/app/main.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/app/main.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/app/main.cpp"
+},
+{
+  "directory": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/build -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/include -I/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/main.cpp.o -c /home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/tests/main.cpp",
+  "file": "/home/wiktoradasiak/Pulpit/po1/zad5_3-Adasiak/tests/main.cpp"
+}
+]
