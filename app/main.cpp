@@ -247,7 +247,7 @@ int main()
        // Predator.obrot(90);
        // Pudzianowski.obrot(90);
        double q,w;
-       q=w=10;
+       q=w=100;
        
        Predator.AnimacjaLotuDrona(p,Lacze,q,w);
        // Pudzianowski.AnimacjaLotuDrona(Lacze,a,b);

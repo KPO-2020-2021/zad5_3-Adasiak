@@ -49,8 +49,7 @@ class Scena
 
     void add_basic_objects(list<std::shared_ptr<Przeszkody> > &p,PzG::LaczeDoGNUPlota &Lacze,Vector<3> place, double xwth, double ywth,int k,int rodzaj);
 
-    void sterowanie_dronem(int ktory);
-    bool menu(); 
+   
     // std::string get_nazwa() const;
 
 

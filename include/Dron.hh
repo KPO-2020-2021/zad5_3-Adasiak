@@ -50,7 +50,7 @@ void zwiad2(PzG::LaczeDoGNUPlota &Lacze,double promien);//2 wersja
 
 void zapisz();
 
-void wspolrzedne();
+Vector<3> wspolrzedne();
 
 bool czy_kolizja(shared_ptr <Przeszkody> p);
 

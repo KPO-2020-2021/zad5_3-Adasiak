@@ -6,7 +6,28 @@
 #include "matrix.hh"
 #include "size.hh"
 #include "Dron.hh"
+#include "lacze_do_gnuplota.hh"
+#include <list>
 
+#include <iostream>
+#include <iomanip>
+#include <stdlib.h>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <unistd.h>
+#include <list>
+#include <memory>
+
+#include "matrix3x3.hh"
+// #include "vector.hh"
+// #include "Graniastoslup6.hh"
+#include "Ostroslup.hh"
+#include "Gran.hh"
+
+#include "Dron.hh"
+#include "Scena.hh"
+#include "../include/lacze_do_gnuplota.hh"
 
 TEST_CASE("konstruktor parametryczny")
 {
@@ -835,21 +856,270 @@ TEST_CASE("graniastoslup - wyświetlanie")
 /*-------------------------------------DRON---------------------------------------*/
 
  
-// TEST_CASE("graniastoslup - wyświetlanie")
-// {
-//     Vector<3> zero;
-//     // double h = 0, w = 0 , p=0;
-//     int kasia=1;
-//     Dron Pr(kasia);
+TEST_CASE("dron - bazowy ")
+{
+    Vector<3> zero;
+    // double h = 0, w = 0 , p=0;
+    int kasia=1;
+    Dron Pr(kasia);
 
 
-//     double tab1[3]={10, 20, 0};
-//     Vector<3> jeden(tab1), dwa;
+    // double tab1[3]={10, 20, 0};
+    Vector<3> jeden, dwa;
     
-//     Pr.ruch(zero,0,0);
-//     // Pr=4;
+    Pr.ruch(zero,0,0);
+    dwa=Pr.wspolrzedne();
 
 
-//     // CHECK(Pr == Pr.ruch);
+    CHECK(jeden == dwa);
 
-// }
+}
+ 
+TEST_CASE("dron - poruszanie ")
+{
+    Vector<3> zero;
+    zero[0]=15;
+    zero[1]=20;
+    // double h = 0, w = 0 , p=0;
+    int kasia=1;
+    Dron Pr(kasia);
+
+
+    // double tab1[3]={10, 20, 0};
+    Vector<3> jeden, dwa;
+    
+
+
+    Pr.ruch(zero,0,0);
+    dwa=Pr.wspolrzedne();
+
+
+    CHECK(zero == dwa);
+
+}
+
+TEST_CASE("dron - obrot")
+{
+    Vector<3> zero;
+    // zero[0]=15;
+    // zero[1]=20;
+    // double h = 0, w = 0 , p=0;
+    int kasia=1;
+    Dron Pr(kasia);
+
+
+    // double tab1[3]={10, 20, 0};
+    Vector<3> jeden, dwa;
+    
+
+
+    Pr.obrot(90);
+    dwa=Pr.wspolrzedne();
+
+
+    CHECK(zero == dwa);
+
+}
+
+
+
+TEST_CASE("dron - animacaj")
+{
+    Vector<3> zero;
+    zero[0]=18.6;
+    zero[1]=21.7;
+    list<std::shared_ptr<Przeszkody>> p1;
+    PzG::LaczeDoGNUPlota Laczee;
+    // double h = 0, w = 0 , p=0;
+    int kasia=1;
+    Dron Pr(kasia);
+
+
+    // double tab1[3]={10, 20, 0};
+    Vector<3> jeden, dwa;
+    
+    Pr.AnimacjaLotuDrona(p1,Laczee,15.0,20.0);
+    dwa=Pr.wspolrzedne();
+
+
+    CHECK(zero == dwa);
+
+}
+
+
+TEST_CASE("dron - zwiad2")
+{
+    Vector<3> zero;
+    zero[0]=-0.5;
+    zero[1]=-0.5;
+    list<std::shared_ptr<Przeszkody>> p1;
+    PzG::LaczeDoGNUPlota Laczee;
+    // double h = 0, w = 0 , p=0;
+    int kasia=1;
+    Dron Pr(kasia);
+
+
+    // double tab1[3]={10, 20, 0};
+    Vector<3> jeden, dwa;
+    
+    Pr.zwiad2(Laczee,50.0);
+    dwa=Pr.wspolrzedne();
+
+
+    CHECK(zero == dwa);
+
+}
+
+
+TEST_CASE("dron - czy_kolizja")
+{
+    Vector<3> zero;
+    zero[0]=-0.5;
+    zero[1]=-0.5;
+    list<std::shared_ptr<Przeszkody>> p1;
+    PzG::LaczeDoGNUPlota Laczee;
+    // double h = 0, w = 0 , p=0;
+    int kasia=1;
+    Dron Pr(kasia);
+
+
+    // double tab1[3]={10, 20, 0};
+    Vector<3> jeden, dwa;
+    bool kolizja=false;
+    auto a = p1.cbegin();
+
+      for (unsigned int i = 0; i < p1.size(); i++)
+      {
+
+          if(Pr.czy_kolizja(*a)){
+                kolizja=true;
+          }
+        a++;
+      }
+
+    dwa=Pr.wspolrzedne();
+
+
+    CHECK(kolizja == false);
+
+}
+
+
+TEST_CASE("dron - kolizja")
+{
+    Vector<3> zero;
+    zero[0]=-0.5;
+    zero[1]=-0.5;
+    list<std::shared_ptr<Przeszkody>> p1;
+    PzG::LaczeDoGNUPlota Laczee;
+    // double h = 0, w = 0 , p=0;
+    int kasia=1;
+    Dron Pr(kasia);
+
+
+    Scena dno1(500.0,500.0,0,"../datasets/dno111.dat","../datasets/dno2222.dat");
+    // int tt;
+    double ee=15,rr=15;
+    dno1.add_basic_objects(p1,Laczee,zero,ee,rr,0,1);
+    // double tab1[3]={10, 20, 0};
+    Vector<3> jeden, dwa;
+    bool kolizja=false;
+    auto a = p1.cbegin();
+
+      for (unsigned int i = 0; i < p1.size(); i++)
+      {
+
+          if(Pr.czy_kolizja(*a)){
+                kolizja=true;
+          }
+        a++;
+      }
+
+    dwa=Pr.wspolrzedne();
+
+
+    CHECK(kolizja == true);
+
+}
+
+TEST_CASE("dron - animacja z kolizja")
+{
+    Vector<3> zero;
+    zero[0]=-0.5;
+    zero[1]=-0.5;
+    list<std::shared_ptr<Przeszkody>> p1;
+    PzG::LaczeDoGNUPlota Laczee;
+    // double h = 0, w = 0 , p=0;
+    int kasia=1;
+    Dron Pr(kasia);
+
+
+    Scena dno1(500.0,500.0,0,"../datasets/dno111.dat","../datasets/dno2222.dat");
+    // int tt;
+    double ee=15,rr=15;
+    dno1.add_basic_objects(p1,Laczee,zero,ee,rr,0,1);
+    // double tab1[3]={10, 20, 0};
+    Vector<3> jeden, dwa;
+
+    Pr.AnimacjaLotuDrona(p1,Laczee,5.0,5.0);
+    bool kolizja=false;
+    auto a = p1.cbegin();
+
+      for (unsigned int i = 0; i < p1.size(); i++)
+      {
+
+          if(Pr.czy_kolizja(*a)){
+                kolizja=true;
+          }
+        a++;
+      }
+
+    dwa=Pr.wspolrzedne();
+
+
+    CHECK(kolizja == true);
+
+}
+/*-------------------------------------SCENA---------------------------------------*/
+
+
+TEST_CASE("SCENA -  add_basic_objects ")
+{
+    Vector<3> zero;
+    zero[0]=-0.5;
+    zero[1]=-0.5;
+    list<std::shared_ptr<Przeszkody>> p1;
+    PzG::LaczeDoGNUPlota Laczee;
+    // double h = 0, w = 0 , p=0;
+    int kasia=1;
+    Dron Pr(kasia);
+
+    Scena dno1(500.0,500.0,0,"../datasets/dno111.dat","../datasets/dno2222.dat");
+    int tt;
+    double ee=15,rr=15;
+    dno1.add_basic_objects(p1,Laczee,zero,ee,rr,0,1);
+
+        tt=p1.size();
+    // double tab1[3]={10, 20, 0};
+    Vector<3> jeden, dwa;
+
+    CHECK(tt==1);
+
+}
+
+/*--------------------------------BRYLA_GEOMETRYCZNA--------------------------------------------*/
+
+
+
+
+TEST_CASE("SCENA -  add_basic_objects ")
+{
+    Vector<3> jeden;
+    Graniastoslup JEDEN(jeden,5.0,5.0,5.0,"../datasets/GRANIASTOSLUPPPPPPPP33333333.dat","../datasets/GRANIASTOSLUPPPPPPPP5555.dat");
+
+    Vector<3> dwa,trzy;
+    dwa=JEDEN.wez_srodek();
+
+    CHECK(dwa==trzy);
+
+}
