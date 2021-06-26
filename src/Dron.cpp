@@ -23,6 +23,8 @@ Dron::Dron(int id)
     wirniki[1] = new Graniastoslup((*korpus)[5], 12, 12, 10, "../datasets/wirnik2.dat", "../datasets/wirnik2_2.dat");
     wirniki[2] = new Graniastoslup((*korpus)[6], 12, 12, 10, "../datasets/wirnik3.dat", "../datasets/wirnik3_2.dat");
     wirniki[3] = new Graniastoslup((*korpus)[7], 12, 12, 10, "../datasets/wirnik4.dat", "../datasets/wirnik4_2.dat");
+    czubek[0]= new Prostopadloscian((*korpus)[3],7,12,20,"../datasets/czubek1.dat", "../datasets/czubek1_2.dat");
+   
     // korpus->ZmienKolor(5);
     // double x,y,z;
     // Vector<3> jeden,dwa,trzy;
@@ -49,6 +51,7 @@ Dron::Dron(int id)
     wirniki1[1] = new Graniastoslup((*korpus1)[5], 12, 12, 10, "../datasets/wirnik2_3.dat", "../datasets/wirnik2_4.dat");
     wirniki1[2] = new Graniastoslup((*korpus1)[6], 12, 12, 10, "../datasets/wirnik3_3.dat", "../datasets/wirnik3_4.dat");
     wirniki1[3] = new Graniastoslup((*korpus1)[7], 12, 12, 10, "../datasets/wirnik4_3.dat", "../datasets/wirnik4_4.dat");
+    czubek[1]= new Prostopadloscian((*korpus1)[3],7,12,20,"../datasets/czubek2.dat", "../datasets/czubek2_2.dat");
   }
 }
 
@@ -111,12 +114,16 @@ void Dron::ruch(Vector<3> droga, double katOZ, double katOY)
     korpus->set_katOZ(katOZ);
     korpus->set_katOY(katOY);
     // korpus->obrotP(1);
+    czubek[0]->move(droga);
+
     korpus->move(droga);
 
     wirniki[0]->zapis();
     wirniki[1]->zapis();
     wirniki[2]->zapis();
     wirniki[3]->zapis();
+
+     czubek[0]->zapis();
 
     korpus->zapis();
 
@@ -148,12 +155,16 @@ void Dron::ruch(Vector<3> droga, double katOZ, double katOY)
     korpus1->set_katOZ(katOZ);
     korpus1->set_katOY(katOY);
     // korpus->obrotP(1);
+    czubek[1]->move(droga);
+    
     korpus1->move(droga);
 
     wirniki1[0]->zapis();
     wirniki1[1]->zapis();
     wirniki1[2]->zapis();
     wirniki1[3]->zapis();
+
+    czubek[1]->zapis();
 
     korpus1->zapis();
 
@@ -171,51 +182,115 @@ void Dron::ruch(Vector<3> droga, double katOZ, double katOY)
 void Dron::obrot(double kat)
 {
   Vector<3> tmp;
-  if (iddrona == 1)
+  if(iddrona==1)
   {
-    wirniki[0]->obrotW(90);
-    wirniki[0]->obrotW1(kat, droga);
+    if(kat>0){
+        wirniki[0]->obrotW(10);
+        wirniki[0]->obrotW1(kat,droga);
+        
+        wirniki[1]->obrotW(10);
+        wirniki[1]->obrotW1(kat,droga);
+        
+        wirniki[2]->obrotW(90);
+        wirniki[2]->obrotW1(kat,droga);
+        
+        wirniki[3]->obrotW(90);
+        wirniki[3]->obrotW1(kat,droga);
 
-    wirniki[1]->obrotW(90);
-    wirniki[1]->obrotW1(kat, droga);
+        czubek[0]->obrotW1(kat,droga);
+        czubek[0]->zapis();
 
-    wirniki[2]->obrotW(90);
-    wirniki[2]->obrotW1(kat, droga);
+        korpus->obrotP(kat, droga);
 
-    wirniki[3]->obrotW(90);
-    wirniki[3]->obrotW1(kat, droga);
+        wirniki[0]->zapis();
+        wirniki[1]->zapis();
+        wirniki[2]->zapis();
+        wirniki[3]->zapis();
 
-    korpus->obrotP(kat, droga);
 
-    wirniki[0]->zapis();
-    wirniki[1]->zapis();
-    wirniki[2]->zapis();
-    wirniki[3]->zapis();
+        korpus->zapis();
+    }
+    if(kat<0)
+    {
+        wirniki[0]->obrotW(90);
+        wirniki[0]->obrotW1(kat,droga);
+        
+        wirniki[1]->obrotW(90);
+        wirniki[1]->obrotW1(kat,droga);
+        
+        wirniki[2]->obrotW(10);
+        wirniki[2]->obrotW1(kat,droga);
+        
+        wirniki[3]->obrotW(10);
+        wirniki[3]->obrotW1(kat,droga);
 
-    korpus->zapis();
+        czubek[0]->obrotW1(kat,droga);
+        czubek[0]->zapis();
+
+
+        korpus->obrotP(kat, droga);
+
+        wirniki[0]->zapis();
+        wirniki[1]->zapis();
+        wirniki[2]->zapis();
+        wirniki[3]->zapis();
+
+        korpus->zapis();
+
+    }
   }
-  if (iddrona == 2)
+  if(iddrona==2)
   {
-    wirniki1[0]->obrotW(90);
-    wirniki1[0]->obrotW1(kat, dwojka);
+    if(kat>0){
+        wirniki1[0]->obrotW(10);
+        wirniki1[0]->obrotW1(kat,dwojka);
+        
+        wirniki1[1]->obrotW(10);
+        wirniki1[1]->obrotW1(kat,dwojka);
+        
+        wirniki1[2]->obrotW(90);
+        wirniki1[2]->obrotW1(kat,dwojka);
+        
+        wirniki1[3]->obrotW(90);
+        wirniki1[3]->obrotW1(kat,dwojka);
 
-    wirniki1[1]->obrotW(90);
-    wirniki1[1]->obrotW1(kat, dwojka);
+         czubek[1]->obrotW1(kat,dwojka);
+        czubek[1]->zapis();
 
-    wirniki1[2]->obrotW(90);
-    wirniki1[2]->obrotW1(kat, dwojka);
+        korpus1->obrotP(kat, dwojka);
 
-    wirniki1[3]->obrotW(90);
-    wirniki1[3]->obrotW1(kat, dwojka);
+        wirniki1[0]->zapis();
+        wirniki1[1]->zapis();
+        wirniki1[2]->zapis();
+        wirniki1[3]->zapis();
 
-    korpus1->obrotP(kat, dwojka);
+        korpus1->zapis();
+    }
+    if(kat<0){
+        wirniki1[0]->obrotW(90);
+        wirniki1[0]->obrotW1(kat,dwojka);
+        
+        wirniki1[1]->obrotW(90);
+        wirniki1[1]->obrotW1(kat,dwojka);
+        
+        wirniki1[2]->obrotW(10);
+        wirniki1[2]->obrotW1(kat,dwojka);
+        
+        wirniki1[3]->obrotW(10);
+        wirniki1[3]->obrotW1(kat,dwojka);
 
-    wirniki1[0]->zapis();
-    wirniki1[1]->zapis();
-    wirniki1[2]->zapis();
-    wirniki1[3]->zapis();
+        czubek[1]->obrotW1(kat,dwojka);
+        czubek[1]->zapis();
 
-    korpus1->zapis();
+        korpus1->obrotP(kat, dwojka);
+
+        wirniki1[0]->zapis();
+        wirniki1[1]->zapis();
+        wirniki1[2]->zapis();
+        wirniki1[3]->zapis();
+
+        korpus1->zapis();
+    }
   }
 }
 

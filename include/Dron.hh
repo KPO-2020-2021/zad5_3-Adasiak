@@ -2,7 +2,9 @@
 
 #include "Prostopadloscian.hh"
 #include "Graniastoslup6.hh"
+// #include "Gran.hh"
 #include "Przeszkody.hh"
+
 // #include "Scena.hh"
 #include <unistd.h>
 #include <list>
@@ -32,6 +34,10 @@ Prostopadloscian  *korpus;
 Graniastoslup *wirniki[4];
 Prostopadloscian  *korpus1;
 Graniastoslup *wirniki1[4];
+Prostopadloscian  *czubek[2];
+// Prostopadloscian  *czubek;
+
+
 // string PLIK_TRASY_PRZELOTU;
 public:
 

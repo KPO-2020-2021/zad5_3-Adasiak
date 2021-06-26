@@ -159,6 +159,7 @@ int main()
                                    // rysunku Prostopadlosciana
        // PzG::InfoPlikuDoRysowania ;
        // Lacze.zmie;
+       
        //-------------------------------------------------------
        //  Wspolrzedne wierzcholkow beda zapisywane w pliku "Prostopadloscian.dat"
        //  Ponizsze metody powoduja, ze dane z pliku beda wizualizowane
@@ -223,12 +224,15 @@ int main()
        Lacze.DodajNazwePliku("../datasets/wirnik2_2.dat",2);
        Lacze.DodajNazwePliku("../datasets/wirnik3_2.dat",2);
        Lacze.DodajNazwePliku("../datasets/wirnik4_2.dat",2);
+       Lacze.DodajNazwePliku("../datasets/czubek1_2.dat",2);
+       
 
        Lacze.DodajNazwePliku("../datasets/korp4.dat",2);
        Lacze.DodajNazwePliku("../datasets/wirnik1_4.dat",2);
        Lacze.DodajNazwePliku("../datasets/wirnik2_4.dat",2);
        Lacze.DodajNazwePliku("../datasets/wirnik3_4.dat",2);
        Lacze.DodajNazwePliku("../datasets/wirnik4_4.dat",2);
+       Lacze.DodajNazwePliku("../datasets/czubek2_2.dat",2);
 
        
        // double marcin=45;
