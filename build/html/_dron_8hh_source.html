@@ -73,78 +73,84 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Prostopadloscian.hh&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Graniastoslup6.hh&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Przeszkody.hh&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// #include &quot;Scena.hh&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lacze__do__gnuplota_8hh.html">lacze_do_gnuplota.hh</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_dron.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_dron.html">Dron</a> </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">int</span> licznik_dronow;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">int</span> nr1=1;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> nr2=2;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> iddrona;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> droga;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// #include &quot;Gran.hh&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Przeszkody.hh&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// #include &quot;Scena.hh&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lacze__do__gnuplota_8hh.html">lacze_do_gnuplota.hh</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_dron.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_dron.html">Dron</a> </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> licznik_dronow;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> nr1=1;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">int</span> nr2=2;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> iddrona;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">double</span> promien=20;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> dwojka;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> srodekD;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;vector&lt;Vector&lt;3&gt;&gt; pkk;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; <span class="comment">// Matrix&lt;3&gt; mac;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="class_prostopadloscian.html">Prostopadloscian</a>  *korpus;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<a class="code" href="class_graniastoslup.html">Graniastoslup</a> *wirniki[4];</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="class_prostopadloscian.html">Prostopadloscian</a>  *korpus1;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="class_graniastoslup.html">Graniastoslup</a> *wirniki1[4];</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// string PLIK_TRASY_PRZELOTU;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<a class="code" href="class_dron.html#a4f79cbd3372c62922867054721f61974">Dron</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_dron.html#afdb179cf74effb5140a5cc55e9fe202c">ruch</a>(<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> droga, <span class="keywordtype">double</span> katOZ, <span class="keywordtype">double</span> katOY <span class="comment">/*, double OX*/</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_dron.html#a516deb832e2a1c62152967fe6d8f5f40">obrot</a>(<span class="keywordtype">double</span> kat);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// void DodajTrasePrzelotu(double x1, double y1, string nazwa_pliku, string nazwa_pliku_do_zapisu);</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> droga;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keywordtype">double</span> promien=20;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> dwojka;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> srodekD;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;vector&lt;Vector&lt;3&gt;&gt; pkk;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="comment">// Matrix&lt;3&gt; mac;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<a class="code" href="class_prostopadloscian.html">Prostopadloscian</a>  *korpus;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<a class="code" href="class_graniastoslup.html">Graniastoslup</a> *wirniki[4];</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="class_prostopadloscian.html">Prostopadloscian</a>  *korpus1;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<a class="code" href="class_graniastoslup.html">Graniastoslup</a> *wirniki1[4];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<a class="code" href="class_prostopadloscian.html">Prostopadloscian</a>  *czubek[2];</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// Prostopadloscian  *czubek;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">// string PLIK_TRASY_PRZELOTU;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_dron.html#ac27a38e6d0bbea7c0482e9f8eedbb8d8">AnimacjaLotuDrona</a>(list&lt;std::shared_ptr&lt;Przeszkody&gt;&gt; &amp;p,<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze, <span class="keywordtype">double</span> x1, <span class="keywordtype">double</span> y1);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> zwiad(<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> promien);<span class="comment">//1 wersja </span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_dron.html#acab128954ff88e5d3ce5f94a59aba9c0">zwiad2</a>(<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze,<span class="keywordtype">double</span> promien);<span class="comment">//2 wersja </span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<a class="code" href="class_dron.html#a4f79cbd3372c62922867054721f61974">Dron</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_dron.html#afdb179cf74effb5140a5cc55e9fe202c">ruch</a>(<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> droga, <span class="keywordtype">double</span> katOZ, <span class="keywordtype">double</span> katOY <span class="comment">/*, double OX*/</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_dron.html#a516deb832e2a1c62152967fe6d8f5f40">obrot</a>(<span class="keywordtype">double</span> kat);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// void DodajTrasePrzelotu(double x1, double y1, string nazwa_pliku, string nazwa_pliku_do_zapisu);</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> zapisz();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_dron.html#ac27a38e6d0bbea7c0482e9f8eedbb8d8">AnimacjaLotuDrona</a>(list&lt;std::shared_ptr&lt;Przeszkody&gt;&gt; &amp;p,<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze, <span class="keywordtype">double</span> x1, <span class="keywordtype">double</span> y1);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> <a class="code" href="class_dron.html#ac86aacee3021f607949d7a6f0cd0991f">wspolrzedne</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_dron.html#abe47f48745a5efc84675efe8b6800539">czy_kolizja</a>(shared_ptr &lt;Przeszkody&gt; p);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> zwiad(<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> promien);<span class="comment">//1 wersja </span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_dron.html#acab128954ff88e5d3ce5f94a59aba9c0">zwiad2</a>(<a class="code" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze,<span class="keywordtype">double</span> promien);<span class="comment">//2 wersja </span></div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_vector.html">Vector&lt;3&gt;</a> <a class="code" href="class_dron.html#a1a878e7f9c8f2fcd5cb69ba49ee35e0e">get_srodek</a>() ;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;std::ostream &amp;operator&lt;&lt;(std::ostream &amp;Strm, <span class="comment">/*const*/</span> <a class="code" href="class_dron.html">Dron</a> &amp;P);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> zapisz();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<a class="code" href="class_vector.html">Vector&lt;3&gt;</a> <a class="code" href="class_dron.html#ac86aacee3021f607949d7a6f0cd0991f">wspolrzedne</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_dron.html#abe47f48745a5efc84675efe8b6800539">czy_kolizja</a>(shared_ptr &lt;Przeszkody&gt; p);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="class_vector.html">Vector&lt;3&gt;</a> <a class="code" href="class_dron.html#a1a878e7f9c8f2fcd5cb69ba49ee35e0e">get_srodek</a>() ;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;std::ostream &amp;operator&lt;&lt;(std::ostream &amp;Strm, <span class="comment">/*const*/</span> <a class="code" href="class_dron.html">Dron</a> &amp;P);</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_dron_html_a4f79cbd3372c62922867054721f61974"><div class="ttname"><a href="class_dron.html#a4f79cbd3372c62922867054721f61974">Dron::Dron</a></div><div class="ttdeci">Dron(int id)</div><div class="ttdoc">konstruktor drona za jego pomoca mozliwe jest stworzenie 2 roznych dronow tworzenie 1 drona zacznie s...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:15</div></div>
-<div class="ttc" id="aclass_dron_html_acab128954ff88e5d3ce5f94a59aba9c0"><div class="ttname"><a href="class_dron.html#acab128954ff88e5d3ce5f94a59aba9c0">Dron::zwiad2</a></div><div class="ttdeci">void zwiad2(PzG::LaczeDoGNUPlota &amp;Lacze, double promien)</div><div class="ttdoc">Zwiadu drona Funkcja odpowiada za powolne wyswietlanie ruchu drona przez co mozemy sledzic na ekranie...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:708</div></div>
+<div class="ttc" id="aclass_dron_html_acab128954ff88e5d3ce5f94a59aba9c0"><div class="ttname"><a href="class_dron.html#acab128954ff88e5d3ce5f94a59aba9c0">Dron::zwiad2</a></div><div class="ttdeci">void zwiad2(PzG::LaczeDoGNUPlota &amp;Lacze, double promien)</div><div class="ttdoc">Zwiadu drona Funkcja odpowiada za powolne wyswietlanie ruchu drona przez co mozemy sledzic na ekranie...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:783</div></div>
 <div class="ttc" id="aclass_graniastoslup_html"><div class="ttname"><a href="class_graniastoslup.html">Graniastoslup</a></div><div class="ttdef"><b>Definition:</b> Graniastoslup6.hh:14</div></div>
 <div class="ttc" id="aclass_pz_g_1_1_lacze_do_g_n_u_plota_html"><div class="ttname"><a href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a></div><div class="ttdoc">Klasa realizuje interfejs do programu GNUPlot.</div><div class="ttdef"><b>Definition:</b> lacze_do_gnuplota.hh:331</div></div>
 <div class="ttc" id="alacze__do__gnuplota_8hh_html"><div class="ttname"><a href="lacze__do__gnuplota_8hh.html">lacze_do_gnuplota.hh</a></div></div>
-<div class="ttc" id="aclass_dron_html_ac27a38e6d0bbea7c0482e9f8eedbb8d8"><div class="ttname"><a href="class_dron.html#ac27a38e6d0bbea7c0482e9f8eedbb8d8">Dron::AnimacjaLotuDrona</a></div><div class="ttdeci">void AnimacjaLotuDrona(list&lt; std::shared_ptr&lt; Przeszkody &gt;&gt; &amp;p, PzG::LaczeDoGNUPlota &amp;Lacze, double x1, double y1)</div><div class="ttdoc">Animacja lotu drona Ftunkcja odpowiada za powolne wyswietlanie ruchu drona przez co mozemy sledzic na...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:321</div></div>
-<div class="ttc" id="aclass_dron_html_a516deb832e2a1c62152967fe6d8f5f40"><div class="ttname"><a href="class_dron.html#a516deb832e2a1c62152967fe6d8f5f40">Dron::obrot</a></div><div class="ttdeci">void obrot(double kat)</div><div class="ttdoc">Funkcja obrotu drona wokol jego srodka obraca ona rotory wzgledem srodka drona oraz korpus przez co c...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:171</div></div>
-<div class="ttc" id="aclass_dron_html_abe47f48745a5efc84675efe8b6800539"><div class="ttname"><a href="class_dron.html#abe47f48745a5efc84675efe8b6800539">Dron::czy_kolizja</a></div><div class="ttdeci">bool czy_kolizja(shared_ptr&lt; Przeszkody &gt; p)</div><div class="ttdoc">czy_kolizja Funkcja sprawdza odleglosc miedzy punktem bazowym drona a srodkiem przeszkody jesli dana ...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:291</div></div>
-<div class="ttc" id="aclass_dron_html"><div class="ttname"><a href="class_dron.html">Dron</a></div><div class="ttdef"><b>Definition:</b> Dron.hh:16</div></div>
-<div class="ttc" id="aclass_dron_html_a1a878e7f9c8f2fcd5cb69ba49ee35e0e"><div class="ttname"><a href="class_dron.html#a1a878e7f9c8f2fcd5cb69ba49ee35e0e">Dron::get_srodek</a></div><div class="ttdeci">Vector&lt; 3 &gt; get_srodek()</div><div class="ttdoc">get_srodek funkcja ustala srodek korpusu drona</div><div class="ttdef"><b>Definition:</b> Dron.cpp:899</div></div>
+<div class="ttc" id="aclass_dron_html_ac27a38e6d0bbea7c0482e9f8eedbb8d8"><div class="ttname"><a href="class_dron.html#ac27a38e6d0bbea7c0482e9f8eedbb8d8">Dron::AnimacjaLotuDrona</a></div><div class="ttdeci">void AnimacjaLotuDrona(list&lt; std::shared_ptr&lt; Przeszkody &gt;&gt; &amp;p, PzG::LaczeDoGNUPlota &amp;Lacze, double x1, double y1)</div><div class="ttdoc">Animacja lotu drona Ftunkcja odpowiada za powolne wyswietlanie ruchu drona przez co mozemy sledzic na...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:396</div></div>
+<div class="ttc" id="aclass_dron_html_a516deb832e2a1c62152967fe6d8f5f40"><div class="ttname"><a href="class_dron.html#a516deb832e2a1c62152967fe6d8f5f40">Dron::obrot</a></div><div class="ttdeci">void obrot(double kat)</div><div class="ttdoc">Funkcja obrotu drona wokol jego srodka obraca ona rotory wzgledem srodka drona oraz korpus przez co c...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:182</div></div>
+<div class="ttc" id="aclass_dron_html_abe47f48745a5efc84675efe8b6800539"><div class="ttname"><a href="class_dron.html#abe47f48745a5efc84675efe8b6800539">Dron::czy_kolizja</a></div><div class="ttdeci">bool czy_kolizja(shared_ptr&lt; Przeszkody &gt; p)</div><div class="ttdoc">czy_kolizja Funkcja sprawdza odleglosc miedzy punktem bazowym drona a srodkiem przeszkody jesli dana ...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:366</div></div>
+<div class="ttc" id="aclass_dron_html"><div class="ttname"><a href="class_dron.html">Dron</a></div><div class="ttdef"><b>Definition:</b> Dron.hh:18</div></div>
+<div class="ttc" id="aclass_dron_html_a1a878e7f9c8f2fcd5cb69ba49ee35e0e"><div class="ttname"><a href="class_dron.html#a1a878e7f9c8f2fcd5cb69ba49ee35e0e">Dron::get_srodek</a></div><div class="ttdeci">Vector&lt; 3 &gt; get_srodek()</div><div class="ttdoc">get_srodek funkcja ustala srodek korpusu drona</div><div class="ttdef"><b>Definition:</b> Dron.cpp:974</div></div>
 <div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector&lt; 3 &gt;</a></div></div>
-<div class="ttc" id="aclass_dron_html_afdb179cf74effb5140a5cc55e9fe202c"><div class="ttname"><a href="class_dron.html#afdb179cf74effb5140a5cc55e9fe202c">Dron::ruch</a></div><div class="ttdeci">void ruch(Vector&lt; 3 &gt; droga, double katOZ, double katOY)</div><div class="ttdoc">Ruch funkcja odpowiadajaca za poruszanie sie drona przemieszcza ona wszytskie jego skladowe (korpus o...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:90</div></div>
+<div class="ttc" id="aclass_dron_html_afdb179cf74effb5140a5cc55e9fe202c"><div class="ttname"><a href="class_dron.html#afdb179cf74effb5140a5cc55e9fe202c">Dron::ruch</a></div><div class="ttdeci">void ruch(Vector&lt; 3 &gt; droga, double katOZ, double katOY)</div><div class="ttdoc">Ruch funkcja odpowiadajaca za poruszanie sie drona przemieszcza ona wszytskie jego skladowe (korpus o...</div><div class="ttdef"><b>Definition:</b> Dron.cpp:93</div></div>
 <div class="ttc" id="aclass_prostopadloscian_html"><div class="ttname"><a href="class_prostopadloscian.html">Prostopadloscian</a></div><div class="ttdef"><b>Definition:</b> Prostopadloscian.hh:10</div></div>
-<div class="ttc" id="aclass_dron_html_ac86aacee3021f607949d7a6f0cd0991f"><div class="ttname"><a href="class_dron.html#ac86aacee3021f607949d7a6f0cd0991f">Dron::wspolrzedne</a></div><div class="ttdeci">Vector&lt; 3 &gt; wspolrzedne()</div><div class="ttdoc">Funckaj sluzaca do wyswietlania wspolrzednych punktu od ktorego zacynalismy tworzenie drona.</div><div class="ttdef"><b>Definition:</b> Dron.cpp:60</div></div>
+<div class="ttc" id="aclass_dron_html_ac86aacee3021f607949d7a6f0cd0991f"><div class="ttname"><a href="class_dron.html#ac86aacee3021f607949d7a6f0cd0991f">Dron::wspolrzedne</a></div><div class="ttdeci">Vector&lt; 3 &gt; wspolrzedne()</div><div class="ttdoc">Funckaj sluzaca do wyswietlania wspolrzednych punktu od ktorego zacynalismy tworzenie drona.</div><div class="ttdef"><b>Definition:</b> Dron.cpp:63</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
