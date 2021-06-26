@@ -1,0 +1,71 @@
+\hypertarget{class_scena}{}\doxysection{Scena Class Reference}
+\label{class_scena}\index{Scena@{Scena}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scena_a23e2a178426995511c608194b9356ede}\label{class_scena_a23e2a178426995511c608194b9356ede}} 
+\mbox{\hyperlink{class_scena_a23e2a178426995511c608194b9356ede}{Scena}} (double dlugosc, double szeroksc, double glebokosc, string nazwa\+\_\+pliku, string nazwa\+\_\+pliku\+\_\+do\+\_\+zapisu)
+\begin{DoxyCompactList}\small\item\em konstryktor sceny tworzymy ja za pomoca bazowego punktu tymczasowego wzgledem ktorego dodajemy dlugosc i szerokosc \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scena_a4a24969d609c4f886357f5a8f0895b86}\label{class_scena_a4a24969d609c4f886357f5a8f0895b86}} 
+void \mbox{\hyperlink{class_scena_a4a24969d609c4f886357f5a8f0895b86}{zapis}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja sluzy do zapisu poszczegolnych punktow sceny do pliku. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scena_a79f2205402df5e038ab3f38d73ebb224}\label{class_scena_a79f2205402df5e038ab3f38d73ebb224}} 
+void \mbox{\hyperlink{class_scena_a79f2205402df5e038ab3f38d73ebb224}{move}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ \&v)
+\begin{DoxyCompactList}\small\item\em move funkcja sluzy do poruszania scena o zadany wektor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scena_a1198772a8b6eab28a17281d6ab5d0fca}\label{class_scena_a1198772a8b6eab28a17281d6ab5d0fca}} 
+void {\bfseries set\+\_\+kat\+OX} (double kat)
+\item 
+\mbox{\Hypertarget{class_scena_aa1b909fe50499a0ae14d0399eb58d7b1}\label{class_scena_aa1b909fe50499a0ae14d0399eb58d7b1}} 
+void {\bfseries set\+\_\+kat\+OZ} (double kat)
+\item 
+\mbox{\Hypertarget{class_scena_ad675a0b7ab466960cee09b87494fa860}\label{class_scena_ad675a0b7ab466960cee09b87494fa860}} 
+void {\bfseries set\+\_\+kat\+OY} (double kat)
+\item 
+\mbox{\Hypertarget{class_scena_abdd42db8852a08e893f0c048c9c4480b}\label{class_scena_abdd42db8852a08e893f0c048c9c4480b}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int i)
+\item 
+\mbox{\Hypertarget{class_scena_ad38f8ad1ef03ae5c873eca46047a401c}\label{class_scena_ad38f8ad1ef03ae5c873eca46047a401c}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ {\bfseries operator\mbox{[}$\,$\mbox{]}} (int i) const
+\item 
+\mbox{\Hypertarget{class_scena_ae04835c0754435af065f63110d7d17e6}\label{class_scena_ae04835c0754435af065f63110d7d17e6}} 
+void \mbox{\hyperlink{class_scena_ae04835c0754435af065f63110d7d17e6}{add\+\_\+basic\+\_\+objects}} (list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_przeszkody}{Przeszkody}} $>$ $>$ \&p, \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} \&Lacze, \mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ place, double xwth, double ywth, int k, int rodzaj)
+\begin{DoxyCompactList}\small\item\em add\+\_\+basic\+\_\+objects funkcja sluzy do dodawania na powierzchnie sceny przeszkody \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scena_a0a695a14135d5d38f35e7cce7d07fc07}\label{class_scena_a0a695a14135d5d38f35e7cce7d07fc07}} 
+double {\bfseries kat\+OZ}
+\item 
+\mbox{\Hypertarget{class_scena_af5b1579ffaf8ec27ffd82d91d11bf5d9}\label{class_scena_af5b1579ffaf8ec27ffd82d91d11bf5d9}} 
+double {\bfseries kat\+OY}
+\item 
+\mbox{\Hypertarget{class_scena_a3a6178f320a4c2da8beee5688af39797}\label{class_scena_a3a6178f320a4c2da8beee5688af39797}} 
+double {\bfseries kat\+OX}
+\item 
+\mbox{\Hypertarget{class_scena_ae0e392cae25934c0b5604dc92383e985}\label{class_scena_ae0e392cae25934c0b5604dc92383e985}} 
+vector$<$ \mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ $>$ {\bfseries scr1}
+\item 
+\mbox{\Hypertarget{class_scena_a2dc5a4e2f466bf6aca1e3be151eaa008}\label{class_scena_a2dc5a4e2f466bf6aca1e3be151eaa008}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ {\bfseries Przesuniecie}
+\item 
+\mbox{\Hypertarget{class_scena_a4237bc0905d7460fb248bc1dc93d0368}\label{class_scena_a4237bc0905d7460fb248bc1dc93d0368}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ {\bfseries srodek}
+\item 
+\mbox{\Hypertarget{class_scena_a503d491c46193af7604430b591800781}\label{class_scena_a503d491c46193af7604430b591800781}} 
+string {\bfseries nazwa\+\_\+pliku}
+\item 
+\mbox{\Hypertarget{class_scena_adbcecee211e9188c84ab227529960291}\label{class_scena_adbcecee211e9188c84ab227529960291}} 
+string {\bfseries nazwa\+\_\+pliku\+\_\+do\+\_\+zapisu}
+\item 
+\mbox{\Hypertarget{class_scena_a7e2e0035bfd32912d05f9102a7956cd5}\label{class_scena_a7e2e0035bfd32912d05f9102a7956cd5}} 
+int {\bfseries k} =0
+\item 
+\mbox{\Hypertarget{class_scena_aceee17793ddd9ffe57ea42bea8c626af}\label{class_scena_aceee17793ddd9ffe57ea42bea8c626af}} 
+int {\bfseries nr} =0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wiktoradasiak/\+Pulpit/po1/zad5\+\_\+3-\/\+Adasiak/include/Scena.\+hh\item 
+/home/wiktoradasiak/\+Pulpit/po1/zad5\+\_\+3-\/\+Adasiak/src/Scena.\+cpp\end{DoxyCompactItemize}

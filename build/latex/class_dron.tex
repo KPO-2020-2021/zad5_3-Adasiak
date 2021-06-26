@@ -1,0 +1,95 @@
+\hypertarget{class_dron}{}\doxysection{Dron Class Reference}
+\label{class_dron}\index{Dron@{Dron}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dron_a4f79cbd3372c62922867054721f61974}{Dron}} (int id)
+\begin{DoxyCompactList}\small\item\em konstruktor drona za jego pomoca mozliwe jest stworzenie 2 roznych dronow tworzenie 1 drona zacznie sie od punktu (0,0,0) a 2 od punktu (-\/100,-\/100,0) do tworzenia konstruncji drona uzyjemy Prostopadlosciana oraz Graniastoslupa6 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dron_afdb179cf74effb5140a5cc55e9fe202c}{ruch}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ droga, double kat\+OZ, double kat\+OY)
+\begin{DoxyCompactList}\small\item\em Ruch funkcja odpowiadajaca za poruszanie sie drona przemieszcza ona wszytskie jego skladowe (korpus oraz wszytskie wirniki) w wersji podstawowej oferuje ona jedynie poruszanie sie drona jednakzde jezeli ustawimy odpowiednie katy bedzie ona jednoczenie wykonywala jego obrot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_dron_a516deb832e2a1c62152967fe6d8f5f40}{obrot}} (double kat)
+\begin{DoxyCompactList}\small\item\em Funkcja obrotu drona wokol jego srodka obraca ona rotory wzgledem srodka drona oraz korpus przez co caly dron kreci sie wokol wlasnej osi o zadany kat. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dron_a859b8300d355c94e6fb26b234a2dc90b}\label{class_dron_a859b8300d355c94e6fb26b234a2dc90b}} 
+bool {\bfseries Dodaj\+Trase\+Przelotu} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} \&Lacze, double x1, double y1)
+\item 
+void \mbox{\hyperlink{class_dron_ac27a38e6d0bbea7c0482e9f8eedbb8d8}{Animacja\+Lotu\+Drona}} (list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_przeszkody}{Przeszkody}} $>$$>$ \&p, \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} \&Lacze, double x1, double y1)
+\begin{DoxyCompactList}\small\item\em Animacja lotu drona Ftunkcja odpowiada za powolne wyswietlanie ruchu drona przez co mozemy sledzic na ekranie jego ruch funckja bazuje na operacjach ruchu drona oraz obrotu w momecie odadanie drona sprawdzana jest lista na ktorej umieszczone sa przeszkody czy aby nie wystepuje kolizja. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dron_a4e0f0fe217e198b9156df405f3e20bdf}\label{class_dron_a4e0f0fe217e198b9156df405f3e20bdf}} 
+void {\bfseries zwiad} (\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ promien)
+\item 
+void \mbox{\hyperlink{class_dron_acab128954ff88e5d3ce5f94a59aba9c0}{zwiad2}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} \&Lacze, double promien)
+\begin{DoxyCompactList}\small\item\em Zwiadu drona Funkcja odpowiada za powolne wyswietlanie ruchu drona przez co mozemy sledzic na ekranie jego ruch funckja bazuje na operacjach ruchu drona oraz obrotu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dron_a0876c4e30eadb53659ca4ee140b9d9dc}\label{class_dron_a0876c4e30eadb53659ca4ee140b9d9dc}} 
+void {\bfseries zapisz} ()
+\item 
+\mbox{\Hypertarget{class_dron_ac86aacee3021f607949d7a6f0cd0991f}\label{class_dron_ac86aacee3021f607949d7a6f0cd0991f}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ \mbox{\hyperlink{class_dron_ac86aacee3021f607949d7a6f0cd0991f}{wspolrzedne}} ()
+\begin{DoxyCompactList}\small\item\em Funckaj sluzaca do wyswietlania wspolrzednych punktu od ktorego zacynalismy tworzenie drona. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dron_abe47f48745a5efc84675efe8b6800539}\label{class_dron_abe47f48745a5efc84675efe8b6800539}} 
+bool \mbox{\hyperlink{class_dron_abe47f48745a5efc84675efe8b6800539}{czy\+\_\+kolizja}} (shared\+\_\+ptr$<$ \mbox{\hyperlink{class_przeszkody}{Przeszkody}} $>$ p)
+\begin{DoxyCompactList}\small\item\em czy\+\_\+kolizja Funkcja sprawdza odleglosc miedzy punktem bazowym drona a srodkiem przeszkody jesli dana odlegosc jest mniejsza od pomieni drona oraz przeszkody nastepuje kolizja i zwracana jest wartosc true w przeciwnym razie zwracana jest wartosc false \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_dron_a1a878e7f9c8f2fcd5cb69ba49ee35e0e}\label{class_dron_a1a878e7f9c8f2fcd5cb69ba49ee35e0e}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ \mbox{\hyperlink{class_dron_a1a878e7f9c8f2fcd5cb69ba49ee35e0e}{get\+\_\+srodek}} ()
+\begin{DoxyCompactList}\small\item\em get\+\_\+srodek funkcja ustala srodek korpusu drona \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dron_a4f79cbd3372c62922867054721f61974}\label{class_dron_a4f79cbd3372c62922867054721f61974}} 
+\index{Dron@{Dron}!Dron@{Dron}}
+\index{Dron@{Dron}!Dron@{Dron}}
+\doxysubsubsection{\texorpdfstring{Dron()}{Dron()}}
+{\footnotesize\ttfamily Dron\+::\+Dron (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+konstruktor drona za jego pomoca mozliwe jest stworzenie 2 roznych dronow tworzenie 1 drona zacznie sie od punktu (0,0,0) a 2 od punktu (-\/100,-\/100,0) do tworzenia konstruncji drona uzyjemy Prostopadlosciana oraz Graniastoslupa6 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dron_ac27a38e6d0bbea7c0482e9f8eedbb8d8}\label{class_dron_ac27a38e6d0bbea7c0482e9f8eedbb8d8}} 
+\index{Dron@{Dron}!AnimacjaLotuDrona@{AnimacjaLotuDrona}}
+\index{AnimacjaLotuDrona@{AnimacjaLotuDrona}!Dron@{Dron}}
+\doxysubsubsection{\texorpdfstring{AnimacjaLotuDrona()}{AnimacjaLotuDrona()}}
+{\footnotesize\ttfamily void Dron\+::\+Animacja\+Lotu\+Drona (\begin{DoxyParamCaption}\item[{list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_przeszkody}{Przeszkody}} $>$$>$ \&}]{p,  }\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} \&}]{Lacze,  }\item[{double}]{x1,  }\item[{double}]{y1 }\end{DoxyParamCaption})}
+
+
+
+Animacja lotu drona Ftunkcja odpowiada za powolne wyswietlanie ruchu drona przez co mozemy sledzic na ekranie jego ruch funckja bazuje na operacjach ruchu drona oraz obrotu w momecie odadanie drona sprawdzana jest lista na ktorej umieszczone sa przeszkody czy aby nie wystepuje kolizja. 
+
+\mbox{\Hypertarget{class_dron_a516deb832e2a1c62152967fe6d8f5f40}\label{class_dron_a516deb832e2a1c62152967fe6d8f5f40}} 
+\index{Dron@{Dron}!obrot@{obrot}}
+\index{obrot@{obrot}!Dron@{Dron}}
+\doxysubsubsection{\texorpdfstring{obrot()}{obrot()}}
+{\footnotesize\ttfamily void Dron\+::obrot (\begin{DoxyParamCaption}\item[{double}]{kat }\end{DoxyParamCaption})}
+
+
+
+Funkcja obrotu drona wokol jego srodka obraca ona rotory wzgledem srodka drona oraz korpus przez co caly dron kreci sie wokol wlasnej osi o zadany kat. 
+
+przy jednoczesnym obrocie rotorow wolol wlasnej osi \mbox{\Hypertarget{class_dron_afdb179cf74effb5140a5cc55e9fe202c}\label{class_dron_afdb179cf74effb5140a5cc55e9fe202c}} 
+\index{Dron@{Dron}!ruch@{ruch}}
+\index{ruch@{ruch}!Dron@{Dron}}
+\doxysubsubsection{\texorpdfstring{ruch()}{ruch()}}
+{\footnotesize\ttfamily void Dron\+::ruch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$}]{droga,  }\item[{double}]{kat\+OZ,  }\item[{double}]{kat\+OY }\end{DoxyParamCaption})}
+
+
+
+Ruch funkcja odpowiadajaca za poruszanie sie drona przemieszcza ona wszytskie jego skladowe (korpus oraz wszytskie wirniki) w wersji podstawowej oferuje ona jedynie poruszanie sie drona jednakzde jezeli ustawimy odpowiednie katy bedzie ona jednoczenie wykonywala jego obrot. 
+
+przy jednoczesnym obrocie rotorow wolol wlasnej osi \mbox{\Hypertarget{class_dron_acab128954ff88e5d3ce5f94a59aba9c0}\label{class_dron_acab128954ff88e5d3ce5f94a59aba9c0}} 
+\index{Dron@{Dron}!zwiad2@{zwiad2}}
+\index{zwiad2@{zwiad2}!Dron@{Dron}}
+\doxysubsubsection{\texorpdfstring{zwiad2()}{zwiad2()}}
+{\footnotesize\ttfamily void Dron\+::zwiad2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+G\+N\+U\+Plota}} \&}]{Lacze,  }\item[{double}]{promien }\end{DoxyParamCaption})}
+
+
+
+Zwiadu drona Funkcja odpowiada za powolne wyswietlanie ruchu drona przez co mozemy sledzic na ekranie jego ruch funckja bazuje na operacjach ruchu drona oraz obrotu. 
+
+przy podaniu promienia lotu dron wzbija sie w powietrze a nastepnie wykonuje lot o zadany promien. kolejno obraca sie wokol wlasnej osi o 90 stopni i zaczyna lot po obwodzie kola. Po powrocie drona do miejsca skad zaczynal przelot po okregu nastpeuje kolejny obrot o 90 stopni wolku jego wlasnej osi a nastepnie powrot do punktu skad zaczynal przelot. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wiktoradasiak/\+Pulpit/po1/zad5\+\_\+3-\/\+Adasiak/include/Dron.\+hh\item 
+/home/wiktoradasiak/\+Pulpit/po1/zad5\+\_\+3-\/\+Adasiak/src/Dron.\+cpp\end{DoxyCompactItemize}

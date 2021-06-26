@@ -227,52 +227,55 @@ std::ostream &operator<<(std::ostream &Strm,
   return Strm;
 }
 
-bool Dron::DodajTrasePrzelotu(PzG::LaczeDoGNUPlota &Lacze, double x2, double y2)
+void Dron::DodajTrasePrzelotu(double x1, double y1)
 {
+    // Wektor3D nastepny = kopia.get_srodek();
+    Vector<3> nastepny = get_srodek();
+    nastepny[2] = 0;
+    // if(iddrona==1){
+    pkk.resize(3);
+    for (int i = 0; i < 3; i++)
+    {
+        pkk[i] = nastepny;
+    }
+    
+    pkk[1][2]+=120;
 
-  // this->nazwa_pliku = nazwa_pliku;
-  // this->nazwa_pliku_do_zapisu = nazwa_pliku_do_zapisu;
+    pkk[2][0]+=x1;
+    pkk[2][1]+=y1;
 
-  ofstream StrmWy(PLIK_TRASY_PRZELOTU);
+    pkk[3][2]=0;
 
-  if (!StrmWy.is_open())
-  {
-    cerr << endl
-         << " Nie mozna otworzyc do zapisu pliku: " << PLIK_TRASY_PRZELOTU << endl
-         << endl;
-    return false;
-  }
+    // nastepny[2] = 0;
+    
+    // droga_drona.push_back(nastepny);
+    // nastepny[2] = 100;
+    // droga_drona.push_back(nastepny);
+    // nastepny[0] += droga * cos(kat * M_PI / 180);
+    // nastepny[1] += droga * sin(kat * M_PI / 180);
+    // droga_drona.push_back(nastepny);
+    // nastepny[2] = 0;
+    // droga_drona.push_back(nastepny);
+    // }
+    // if(iddrona==2){
+    // dwojka.push_back(nastepny);
+    // nastepny[2] = 100;
+    // droga_drona.push_back(nastepny);
+    // nastepny[0] += droga * cos(kat * M_PI / 180);
+    // nastepny[1] += droga * sin(kat * M_PI / 180);
+    // droga_drona.push_back(nastepny);
+    // nastepny[2] = 0;
+    // droga_drona.push_back(nastepny);
+    // }
+    std::fstream plik;
 
-  double a, b;
-  if (iddrona == 1)
-  {
-    a = droga[0] + 15;
-    b = droga[1] + 15;
-  }
-  if (iddrona == 2)
-  {
-    a = droga[0] + 15;
-    b = droga[1] + 15;
-  }
-  Vector<3> s, d, f, g;
-  s[0] = a;
-  s[1] = b;
+    plik.open("../datasets/droga.dat", std::ios::out);
+    for (int i = 0; i < (int)pkk.size(); i++)
+    {
 
-  d = s;
-  d[2] = 80;
-
-  f = d;
-  f[0] += x2;
-  f[1] += y2;
-
-  g = f;
-  g[2] = 0;
-  StrmWy << s << endl
-         << d << endl
-         << f << endl
-         << g << endl;
-  Lacze.DodajNazwePliku(PLIK_TRASY_PRZELOTU, 1);
-  return !StrmWy.fail();
+        plik << pkk[i] << std::endl;
+    }
+    plik.close();
 }
 
 
@@ -315,7 +318,7 @@ bool Dron::czy_kolizja(std::shared_ptr<Przeszkody> p)
 
 void Dron::AnimacjaLotuDrona(list<std::shared_ptr<Przeszkody>> &p, PzG::LaczeDoGNUPlota &Lacze, double x1, double y1)
 {
-
+  // DodajTrasePrzelotu(x1,y1);
   double x_dron = 20, y_dron = 20, z_dron = 0;
   int k=1;
   // double KatOr_st = 0;

@@ -1,0 +1,143 @@
+\hypertarget{class_bryla_geometryczna}{}\doxysection{Bryla\+Geometryczna Class Reference}
+\label{class_bryla_geometryczna}\index{BrylaGeometryczna@{BrylaGeometryczna}}
+Inheritance diagram for Bryla\+Geometryczna\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.053292cm]{class_bryla_geometryczna}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_ab14f19ccbd01878c0477a2248f3cbe40}\label{class_bryla_geometryczna_ab14f19ccbd01878c0477a2248f3cbe40}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ {\bfseries operator\mbox{[}$\,$\mbox{]}} (int Ind) const
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_ac531e16a225898d16e29a904c5930f4a}\label{class_bryla_geometryczna_ac531e16a225898d16e29a904c5930f4a}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int Ind)
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a24104362422ff6d64bb08f416487493e}\label{class_bryla_geometryczna_a24104362422ff6d64bb08f416487493e}} 
+void \mbox{\hyperlink{class_bryla_geometryczna_a24104362422ff6d64bb08f416487493e}{move}} (const \mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ \&v)
+\begin{DoxyCompactList}\small\item\em move opdopwiada za translacje poszczegolnych punktow o zadany wektor w przypadku ustawienia wczesnijszego katow dla bryly posiada mozliwosc jednoczesnego obrotu \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_ae5d451fb04e996c84b755016135f5980}\label{class_bryla_geometryczna_ae5d451fb04e996c84b755016135f5980}} 
+void \mbox{\hyperlink{class_bryla_geometryczna_ae5d451fb04e996c84b755016135f5980}{obrot\+OZ}} (double kat)
+\begin{DoxyCompactList}\small\item\em Funkcja sluzy do obrotu bryly wzgledem srodka ukladu wsplrzednych. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bryla_geometryczna_af52ff5f7a917f4d0bb46e9f9818d0fe4}{obrotP}} (double kat, \mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ a)
+\begin{DoxyCompactList}\small\item\em Funkcja sluzy do obrotu Prostopadloscianu wzgledem jego srodka. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bryla_geometryczna_a72f3adf9b08bb4b41e57b7957456276a}{obrotW}} (double kat)
+\begin{DoxyCompactList}\small\item\em Funkcja sluzy do obrotu Graniastoslupa wzgledem jego srodka. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a84ae700411677eca2dfb7e8162bfad60}\label{class_bryla_geometryczna_a84ae700411677eca2dfb7e8162bfad60}} 
+void {\bfseries obrot\+W1} (double kat, \mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ b)
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a85084883b695bc95fa507939013b46d2}\label{class_bryla_geometryczna_a85084883b695bc95fa507939013b46d2}} 
+std\+::string {\bfseries nazwa} ()
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_aee525786bf4c24633285968719bc7bdc}\label{class_bryla_geometryczna_aee525786bf4c24633285968719bc7bdc}} 
+std\+::string \mbox{\hyperlink{class_bryla_geometryczna_aee525786bf4c24633285968719bc7bdc}{get\+\_\+nazwa}} () const
+\begin{DoxyCompactList}\small\item\em get\+\_\+nazwa funkcja zwraca nazwe pliku bryly geometryczneij \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bryla_geometryczna_ae0c32a614e93837891c2483a0f69b039}{zapis}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja sluzy do zapisu bryly geometrycznej zapisujemy kolejno wspolzedne kazdego z jej punktow. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_ae0f121036691302641962169fc09d679}\label{class_bryla_geometryczna_ae0f121036691302641962169fc09d679}} 
+void {\bfseries set\+\_\+kat\+OX} (double kat)
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a85c7b710b48ca63d235b8b6439505aef}\label{class_bryla_geometryczna_a85c7b710b48ca63d235b8b6439505aef}} 
+void {\bfseries set\+\_\+kat\+OZ} (double kat)
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_ae55e40112c2be9bcd813413e6675f7e2}\label{class_bryla_geometryczna_ae55e40112c2be9bcd813413e6675f7e2}} 
+void {\bfseries set\+\_\+kat\+OY} (double kat)
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a287ce77c4333c1fdc7343fbc7645053f}\label{class_bryla_geometryczna_a287ce77c4333c1fdc7343fbc7645053f}} 
+void {\bfseries set\+\_\+\+Przesuniecie} (\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ droga)
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a7449059f5310c9b7e1d34ae1995687b4}\label{class_bryla_geometryczna_a7449059f5310c9b7e1d34ae1995687b4}} 
+double {\bfseries promien} ()
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_adee79821d4af8c70f3ea0eadca2920a0}\label{class_bryla_geometryczna_adee79821d4af8c70f3ea0eadca2920a0}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ \mbox{\hyperlink{class_bryla_geometryczna_adee79821d4af8c70f3ea0eadca2920a0}{wez\+\_\+srodek}} ()
+\begin{DoxyCompactList}\small\item\em wez\+\_\+srodek funkcja zwraca srodek bryly geometryczneij \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_aded8b5f9ce3fc091e6f0a75efd1ef89f}\label{class_bryla_geometryczna_aded8b5f9ce3fc091e6f0a75efd1ef89f}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ {\bfseries get\+\_\+srodek} () const
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a6c68a781d24b227c6784e4e3d62a75d5}\label{class_bryla_geometryczna_a6c68a781d24b227c6784e4e3d62a75d5}} 
+bool \mbox{\hyperlink{class_bryla_geometryczna_a6c68a781d24b227c6784e4e3d62a75d5}{czy\+\_\+kolizja}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_przeszkody}{Przeszkody}} $>$ \&p)
+\begin{DoxyCompactList}\small\item\em czy\+\_\+kolizja funkcja sprawdza odleglosc pomiedzy srodkiem bryly geometrycznej oraz srodkiem przeszkody jesli odleglosc miedzy bryla a przeszkoda jest mniejsza od promieni bryly oraz przeszkody nastepuje kolizja a funkcja zwraca wartosc prawdziwa w przeciwnym przypadku zwraca wartosc false \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_ae73c204e388055031326099b232c0cdf}\label{class_bryla_geometryczna_ae73c204e388055031326099b232c0cdf}} 
+double {\bfseries wez\+\_\+promien} ()
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a3c71e100271dffe7692446963b84dfc7}\label{class_bryla_geometryczna_a3c71e100271dffe7692446963b84dfc7}} 
+void \mbox{\hyperlink{class_bryla_geometryczna_a3c71e100271dffe7692446963b84dfc7}{set\+\_\+srodek}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ srodek)
+\begin{DoxyCompactList}\small\item\em set\+\_\+srodek funkcja odpowiada za pobranie srodka byryly geometrycznej i zapisanie jej w odpowiedniej zmiennej \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a33e329c14fb56bd86157bda936eb4c75}\label{class_bryla_geometryczna_a33e329c14fb56bd86157bda936eb4c75}} 
+vector$<$ \mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ $>$ {\bfseries pkt1}
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a1d0637a90de19bb07fc1da7508e9c1d8}\label{class_bryla_geometryczna_a1d0637a90de19bb07fc1da7508e9c1d8}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ {\bfseries Przesuniecie}
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a4204bd05361e12186b67a03d83fd5fee}\label{class_bryla_geometryczna_a4204bd05361e12186b67a03d83fd5fee}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$ {\bfseries srodek}
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a57017ee552b3a5d59a9f1ee713ca4497}\label{class_bryla_geometryczna_a57017ee552b3a5d59a9f1ee713ca4497}} 
+string {\bfseries nazwa\+\_\+pliku}
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a31717ff04ad5fd1fab66a64f14b811e0}\label{class_bryla_geometryczna_a31717ff04ad5fd1fab66a64f14b811e0}} 
+string {\bfseries nazwa\+\_\+pliku\+\_\+do\+\_\+zapisu}
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_ad4b7fcbbae21b2377706734a58844f72}\label{class_bryla_geometryczna_ad4b7fcbbae21b2377706734a58844f72}} 
+double {\bfseries kat\+OZ}
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a5bdec9c1a32b96fcda29a5b517888d80}\label{class_bryla_geometryczna_a5bdec9c1a32b96fcda29a5b517888d80}} 
+double {\bfseries kat\+OY}
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_a1fa8a5d5eb02ddd1d9bc9780e2ae75f2}\label{class_bryla_geometryczna_a1fa8a5d5eb02ddd1d9bc9780e2ae75f2}} 
+double {\bfseries kat\+OX}
+\item 
+\mbox{\Hypertarget{class_bryla_geometryczna_af5167e0bd77d32f5e63f488a94234c7d}\label{class_bryla_geometryczna_af5167e0bd77d32f5e63f488a94234c7d}} 
+double {\bfseries bpromien}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bryla_geometryczna_af52ff5f7a917f4d0bb46e9f9818d0fe4}\label{class_bryla_geometryczna_af52ff5f7a917f4d0bb46e9f9818d0fe4}} 
+\index{BrylaGeometryczna@{BrylaGeometryczna}!obrotP@{obrotP}}
+\index{obrotP@{obrotP}!BrylaGeometryczna@{BrylaGeometryczna}}
+\doxysubsubsection{\texorpdfstring{obrotP()}{obrotP()}}
+{\footnotesize\ttfamily void Bryla\+Geometryczna\+::obrotP (\begin{DoxyParamCaption}\item[{double}]{kat,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}$<$ 3 $>$}]{a }\end{DoxyParamCaption})}
+
+
+
+Funkcja sluzy do obrotu Prostopadloscianu wzgledem jego srodka. 
+
+\begin{DoxyVerb}kazdy punkt przesuwamy tak aby srodek prostopadloscian znajdowal sie w srodku ukladu wspolrzednych a nastepnie wykoujemy rotacje przez co otrzymujemy obrocona obyle wzgledem jej srodka 
+\end{DoxyVerb}
+ \mbox{\Hypertarget{class_bryla_geometryczna_a72f3adf9b08bb4b41e57b7957456276a}\label{class_bryla_geometryczna_a72f3adf9b08bb4b41e57b7957456276a}} 
+\index{BrylaGeometryczna@{BrylaGeometryczna}!obrotW@{obrotW}}
+\index{obrotW@{obrotW}!BrylaGeometryczna@{BrylaGeometryczna}}
+\doxysubsubsection{\texorpdfstring{obrotW()}{obrotW()}}
+{\footnotesize\ttfamily void Bryla\+Geometryczna\+::obrotW (\begin{DoxyParamCaption}\item[{double}]{kat }\end{DoxyParamCaption})}
+
+
+
+Funkcja sluzy do obrotu Graniastoslupa wzgledem jego srodka. 
+
+kazdy punkt przesuwamy tak aby srodek graniastoslupa znajdowal sie w srodku ukladu wspolrzednych a nastepnie wykoujemy rotacje przez co otrzymujemy obrocona obyle wzgledem jej srodka \mbox{\Hypertarget{class_bryla_geometryczna_ae0c32a614e93837891c2483a0f69b039}\label{class_bryla_geometryczna_ae0c32a614e93837891c2483a0f69b039}} 
+\index{BrylaGeometryczna@{BrylaGeometryczna}!zapis@{zapis}}
+\index{zapis@{zapis}!BrylaGeometryczna@{BrylaGeometryczna}}
+\doxysubsubsection{\texorpdfstring{zapis()}{zapis()}}
+{\footnotesize\ttfamily void Bryla\+Geometryczna\+::zapis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Funkcja sluzy do zapisu bryly geometrycznej zapisujemy kolejno wspolzedne kazdego z jej punktow. 
+
+
+
+Implements \mbox{\hyperlink{class_przeszkody}{Przeszkody}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wiktoradasiak/\+Pulpit/po1/zad5\+\_\+3-\/\+Adasiak/include/Bryla\+Geometryczna.\+hh\item 
+/home/wiktoradasiak/\+Pulpit/po1/zad5\+\_\+3-\/\+Adasiak/src/Bryla\+Geometryczna.\+cpp\end{DoxyCompactItemize}

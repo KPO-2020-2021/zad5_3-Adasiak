@@ -157,7 +157,8 @@ int main()
 
        PzG::LaczeDoGNUPlota Lacze; // Ta zmienna jest potrzebna do wizualizacji
                                    // rysunku Prostopadlosciana
-       
+       // PzG::InfoPlikuDoRysowania ;
+       // Lacze.zmie;
        //-------------------------------------------------------
        //  Wspolrzedne wierzcholkow beda zapisywane w pliku "Prostopadloscian.dat"
        //  Ponizsze metody powoduja, ze dane z pliku beda wizualizowane
@@ -257,10 +258,10 @@ int main()
        // Pudzianowski.zwiad2(Lacze,kitek); 
 
 
-       // Vector<3> place2;
-       // place2[0]=-50;
-       // place2[1]=-50;
-       // dno.add_basic_objects(Lacze,place2, xwth1, ywth1,1,3);
+       Vector<3> place2;
+       place2[0]=-50;
+       place2[1]=-50;
+       // dno.add_basic_objects(p,Lacze,place2, xwth1, ywth1,1,3);
        // dno.zapis();
 
        
@@ -279,7 +280,7 @@ int main()
        std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
        std::cin.ignore(100000, '\n');
 
-              
+              Vector<3> tmpppp;
 
        // Predator.ruch(kasia,0,0);
        // // Predator.obrot(1);
@@ -336,7 +337,6 @@ int main()
               {
 
                      std::cout<<"Podaj miejsce pojawiania sie przeszkody" << std::endl;
-                     Vector<3> tmpppp;
                      std::cin >> place1;
                      std::cout << "Podaj dlugosc przeszkody" << std::endl;
                      std::cin >> xwth1;
@@ -357,15 +357,12 @@ int main()
                      
                      if (powierzchnia == 2)
                      {
-                            dno.add_basic_objects(p,Lacze,tmpppp, xwth1, ywth1,0,2);
+                            dno.add_basic_objects(p,Lacze,place1, xwth1, ywth1,0,2);
                      }
                      
                      if (powierzchnia == 3)
                      {
-                            // std::cout << "Podaj scale wzdluz kolejnych osi OX, OY, OZ." << std::endl;
-                            // std::cin >> skala;
-
-                            dno.add_basic_objects(p,Lacze,tmpppp, xwth1, ywth1,0,3);
+                            dno.add_basic_objects(p,Lacze,place1, xwth1, ywth1,0,3);
                      }
                      
                      Lacze.Rysuj();

@@ -13,8 +13,7 @@
 #include <string>
 
 
-class Dron /*:public Przeszkody, public std::enable_shared_from_this< Dron >
-*/
+class Dron 
 {
 int licznik_dronow;
 int nr1=1;
@@ -27,8 +26,8 @@ double promien=20;
 Vector<3> dwojka;
 
 Vector<3> srodekD;
-
-// Matrix<3> mac;
+vector<Vector<3>> pkk;
+ // Matrix<3> mac;
 Prostopadloscian  *korpus;
 Graniastoslup *wirniki[4];
 Prostopadloscian  *korpus1;
@@ -40,7 +39,7 @@ Dron(int id);
 void ruch(Vector<3> droga, double katOZ, double katOY /*, double OX*/);
 void obrot(double kat);
 
-bool DodajTrasePrzelotu(PzG::LaczeDoGNUPlota &Lacze,double x1, double y1);
+void DodajTrasePrzelotu(double x1, double y1);
 
 void AnimacjaLotuDrona(list<std::shared_ptr<Przeszkody>> &p,PzG::LaczeDoGNUPlota &Lacze, double x1, double y1);
 

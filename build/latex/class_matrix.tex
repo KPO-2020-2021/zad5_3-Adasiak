@@ -1,0 +1,55 @@
+\hypertarget{class_matrix}{}\doxysection{Matrix$<$ S\+I\+ZE $>$ Class Template Reference}
+\label{class_matrix}\index{Matrix$<$ SIZE $>$@{Matrix$<$ SIZE $>$}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_matrix_af8ed4d409be20420f32d67130a66035e}\label{class_matrix_af8ed4d409be20420f32d67130a66035e}} 
+\mbox{\hyperlink{class_matrix_af8ed4d409be20420f32d67130a66035e}{Matrix}} (double\mbox{[}S\+I\+ZE\mbox{]}\mbox{[}S\+I\+ZE\mbox{]})
+\begin{DoxyCompactList}\small\item\em $\vert$ Konstruktor parametryczny klasy Matrix$<$   S\+I\+Z\+E$>$. $\vert$ $\vert$ Argumenty\+: $\vert$ $\vert$ tmp -\/ dwuwymiarowa tablica z elementami typu double. $\vert$ $\vert$ Zwraca\+: $\vert$ $\vert$ Macierz wypelniona wartosciami podanymi w argumencie. $\vert$ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matrix_a6ad13ada55f1e7c5b3a6aa8dc831209e}\label{class_matrix_a6ad13ada55f1e7c5b3a6aa8dc831209e}} 
+\mbox{\hyperlink{class_matrix_a6ad13ada55f1e7c5b3a6aa8dc831209e}{Matrix}} ()
+\begin{DoxyCompactList}\small\item\em $\vert$ Konstruktor klasy Matrix$<$   S\+I\+Z\+E$>$. $\vert$ $\vert$ Argumenty\+: $\vert$ $\vert$ Brak argumentow. $\vert$ $\vert$ Zwraca\+: $\vert$ $\vert$ Macierz wypelnione wartoscia 0. $\vert$ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matrix_aaf03ab3b2b686ab921f9bf9f660718f5}\label{class_matrix_aaf03ab3b2b686ab921f9bf9f660718f5}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \mbox{\hyperlink{class_matrix_aaf03ab3b2b686ab921f9bf9f660718f5}{operator$\ast$}} (\mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ tmp)
+\begin{DoxyCompactList}\small\item\em $\vert$ Realizuje mnozenie macierzy przez wektor. $\vert$ $\vert$ Argumenty\+: $\vert$ $\vert$ this -\/ macierz, czyli pierwszy skladnik mnozenia, $\vert$ $\vert$ v -\/ wektor, czyli drugi skladnik mnozenia. $\vert$ $\vert$ Zwraca\+: $\vert$ $\vert$ Iloczyn dwoch skladnikow przekazanych jako wektor. $\vert$ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matrix_a1f6c9712b9dac1cbc829fb1ded1158f8}\label{class_matrix_a1f6c9712b9dac1cbc829fb1ded1158f8}} 
+\mbox{\hyperlink{class_vector}{Vector}}$<$ S\+I\+ZE $>$ \mbox{\hyperlink{class_matrix_a1f6c9712b9dac1cbc829fb1ded1158f8}{rotacja}} (const double \&kat) const
+\begin{DoxyCompactList}\small\item\em $\vert$ Realizuje rotacje dwoch wektorow. $\vert$ $\vert$ Argumenty\+: $\vert$ $\vert$ this -\/ pierwszy skladnik $\vert$ $\vert$ transformation -\/ macierz tymczasowa $\vert$ $\vert$ $\vert$ $\vert$ $\vert$ Zwraca\+: $\vert$ $\vert$ Wektor rotacji o odpowiednia funkcje geometryczna $\vert$ $\vert$ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matrix_a924b76af78e5217f5fbc8b10f7879f91}\label{class_matrix_a924b76af78e5217f5fbc8b10f7879f91}} 
+\mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ \mbox{\hyperlink{class_matrix_a924b76af78e5217f5fbc8b10f7879f91}{operator+}} (\mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ tmp)
+\begin{DoxyCompactList}\small\item\em $\vert$ Przeciążenie dodawania macierzy $\vert$ $\vert$ Argumenty\+: $\vert$ $\vert$ this -\/ macierz, czyli pierwszy skladnik dodawania, $\vert$ $\vert$ v -\/ wektor, czyli drugi skladnik dodawania. $\vert$ $\vert$ Zwraca\+: $\vert$ $\vert$ Macierz -\/ iloczyn dwóch podanych macierzy. $\vert$ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matrix_acbe3b78799335bc63cf6268b68d6b19b}\label{class_matrix_acbe3b78799335bc63cf6268b68d6b19b}} 
+\mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ {\bfseries operator$\ast$} (\mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$ tmp)
+\item 
+\mbox{\Hypertarget{class_matrix_a78a6ea5953b1b58931e6a6bc4231d58e}\label{class_matrix_a78a6ea5953b1b58931e6a6bc4231d58e}} 
+{\bfseries Matrix} (double kat)
+\item 
+void \mbox{\hyperlink{class_matrix_a0c6e9589b2d92087edeb1ea7ff646f92}{Gaus}} ()
+\begin{DoxyCompactList}\small\item\em $\vert$ Pzrelicznik kata na radiany $\vert$ $\vert$ Argumenty\+: $\vert$ $\vert$ kat $\vert$ $\vert$ Zwraca\+: $\vert$ $\vert$ rad (kat przeliczony na radiany) $\vert$ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matrix_a3d9cdb0c7a13f49fdb380b0ef94c6aa7}\label{class_matrix_a3d9cdb0c7a13f49fdb380b0ef94c6aa7}} 
+double \& \mbox{\hyperlink{class_matrix_a3d9cdb0c7a13f49fdb380b0ef94c6aa7}{operator()}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em $\vert$ Funktor macierzy $\vert$ $\vert$ Argumenty\+: $\vert$ $\vert$ row -\/ numer wiersza. $\vert$ $\vert$ column -\/ numer kolumny. $\vert$ $\vert$ Zwraca\+: $\vert$ $\vert$ Wartosc macierzy w danym miejscu tablicy. $\vert$ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_matrix_ac4496556d0a632abbc1a1f4601ad2400}\label{class_matrix_ac4496556d0a632abbc1a1f4601ad2400}} 
+const double \& \mbox{\hyperlink{class_matrix_ac4496556d0a632abbc1a1f4601ad2400}{operator()}} (int row, int column) const
+\begin{DoxyCompactList}\small\item\em $\vert$ Funktor macierzy $\vert$ $\vert$ Argumenty\+: $\vert$ $\vert$ row -\/ numer wiersza. $\vert$ $\vert$ column -\/ numer kolumny. $\vert$ $\vert$ Zwraca\+: $\vert$ $\vert$ Wartosc macierzy w danym miejscu tablicy jako stala. $\vert$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_matrix_a0c6e9589b2d92087edeb1ea7ff646f92}\label{class_matrix_a0c6e9589b2d92087edeb1ea7ff646f92}} 
+\index{Matrix$<$ SIZE $>$@{Matrix$<$ SIZE $>$}!Gaus@{Gaus}}
+\index{Gaus@{Gaus}!Matrix$<$ SIZE $>$@{Matrix$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{Gaus()}{Gaus()}}
+{\footnotesize\ttfamily template$<$int S\+I\+ZE$>$ \\
+void \mbox{\hyperlink{class_matrix}{Matrix}}$<$ S\+I\+ZE $>$\+::Gaus}
+
+
+
+$\vert$ Pzrelicznik kata na radiany $\vert$ $\vert$ Argumenty\+: $\vert$ $\vert$ kat $\vert$ $\vert$ Zwraca\+: $\vert$ $\vert$ rad (kat przeliczony na radiany) $\vert$ 
+
+$\vert$ Zwraca Prostopadlosciana pomnorzony przez ofpowiednie funkcje trygonometrzyczne konieczne do rotacji $\vert$ $\vert$ Argumenty\+: $\vert$ $\vert$ Poszczegolne wierzcholki Prostopadlosciana $\vert$ $\vert$ Macierz obrotu $\vert$ $\vert$ Zwraca\+: $\vert$ $\vert$ Wizrcholki przemnozone przez odpowiednie funkcje trygonometrczne $\vert$
+
+$\vert$ Wyznacznik macierzy metoda gaussa $\vert$ $\vert$ Argumenty\+: $\vert$ $\vert$ $\vert$ Macierz $\vert$ $\vert$ Zwraca\+: $\vert$ $\vert$ Wyznacznik macierzy $\vert$ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/wiktoradasiak/\+Pulpit/po1/zad5\+\_\+3-\/\+Adasiak/include/matrix.\+hh\end{DoxyCompactItemize}
