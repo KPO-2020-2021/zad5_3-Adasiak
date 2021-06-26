@@ -227,56 +227,58 @@ std::ostream &operator<<(std::ostream &Strm,
   return Strm;
 }
 
-void Dron::DodajTrasePrzelotu(double x1, double y1)
-{
-    // Wektor3D nastepny = kopia.get_srodek();
-    Vector<3> nastepny = get_srodek();
-    nastepny[2] = 0;
-    // if(iddrona==1){
-    pkk.resize(3);
-    for (int i = 0; i < 3; i++)
-    {
-        pkk[i] = nastepny;
-    }
+// void Dron::DodajTrasePrzelotu(double x1, double y1, string nazwa_pliku, string nazwa_pliku_do_zapisu)
+// {
+// //      this->nazwa_pliku = nazwa_pliku;
+// //     this->nazwa_pliku_do_zapisu = nazwa_pliku_do_zapisu;
+//     // Wektor3D nastepny = kopia.get_srodek();
+//     Vector<3> nastepny = get_srodek();
+//     nastepny[2] = 0;
+//     // if(iddrona==1){
+//     pkk.resize(3);
+//     for (int i = 0; i < 3; i++)
+//     {
+//         pkk[i] = nastepny;
+//     }
     
-    pkk[1][2]+=120;
+//     pkk[1][2]+=120;
 
-    pkk[2][0]+=x1;
-    pkk[2][1]+=y1;
+//     pkk[2][0]+=x1;
+//     pkk[2][1]+=y1;
 
-    pkk[3][2]=0;
+//     pkk[3][2]=0;
 
-    // nastepny[2] = 0;
+//     // nastepny[2] = 0;
     
-    // droga_drona.push_back(nastepny);
-    // nastepny[2] = 100;
-    // droga_drona.push_back(nastepny);
-    // nastepny[0] += droga * cos(kat * M_PI / 180);
-    // nastepny[1] += droga * sin(kat * M_PI / 180);
-    // droga_drona.push_back(nastepny);
-    // nastepny[2] = 0;
-    // droga_drona.push_back(nastepny);
-    // }
-    // if(iddrona==2){
-    // dwojka.push_back(nastepny);
-    // nastepny[2] = 100;
-    // droga_drona.push_back(nastepny);
-    // nastepny[0] += droga * cos(kat * M_PI / 180);
-    // nastepny[1] += droga * sin(kat * M_PI / 180);
-    // droga_drona.push_back(nastepny);
-    // nastepny[2] = 0;
-    // droga_drona.push_back(nastepny);
-    // }
-    std::fstream plik;
+//     // droga_drona.push_back(nastepny);
+//     // nastepny[2] = 100;
+//     // droga_drona.push_back(nastepny);
+//     // nastepny[0] += droga * cos(kat * M_PI / 180);
+//     // nastepny[1] += droga * sin(kat * M_PI / 180);
+//     // droga_drona.push_back(nastepny);
+//     // nastepny[2] = 0;
+//     // droga_drona.push_back(nastepny);
+//     // }
+//     // if(iddrona==2){
+//     // dwojka.push_back(nastepny);
+//     // nastepny[2] = 100;
+//     // droga_drona.push_back(nastepny);
+//     // nastepny[0] += droga * cos(kat * M_PI / 180);
+//     // nastepny[1] += droga * sin(kat * M_PI / 180);
+//     // droga_drona.push_back(nastepny);
+//     // nastepny[2] = 0;
+//     // droga_drona.push_back(nastepny);
+//     // }
+//     std::fstream plik;
 
-    plik.open("../datasets/droga.dat", std::ios::out);
-    for (int i = 0; i < (int)pkk.size(); i++)
-    {
+//     plik.open("../datasets/droga.dat", std::ios::out);
+//     for (int i = 0; i < (int)pkk.size(); i++)
+//     {
 
-        plik << pkk[i] << std::endl;
-    }
-    plik.close();
-}
+//         plik << pkk[i] << std::endl;
+//     }
+//     plik.close();
+// }
 
 
 /*!       
@@ -318,7 +320,10 @@ bool Dron::czy_kolizja(std::shared_ptr<Przeszkody> p)
 
 void Dron::AnimacjaLotuDrona(list<std::shared_ptr<Przeszkody>> &p, PzG::LaczeDoGNUPlota &Lacze, double x1, double y1)
 {
-  // DodajTrasePrzelotu(x1,y1);
+  // DodajTrasePrzelotu(x1,y1,"../datasets/droga.dat", "../datasets/droga2.dat");
+  Vector<3> nachwile=get_srodek();
+  Prostopadloscian kk(nachwile,x1,y1,120,"../datasets/droga.dat", "../datasets/droga2.dat");
+  kk.zapis();
   double x_dron = 20, y_dron = 20, z_dron = 0;
   int k=1;
   // double KatOr_st = 0;

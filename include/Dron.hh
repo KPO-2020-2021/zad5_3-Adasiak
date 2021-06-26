@@ -39,7 +39,7 @@ Dron(int id);
 void ruch(Vector<3> droga, double katOZ, double katOY /*, double OX*/);
 void obrot(double kat);
 
-void DodajTrasePrzelotu(double x1, double y1);
+// void DodajTrasePrzelotu(double x1, double y1, string nazwa_pliku, string nazwa_pliku_do_zapisu);
 
 void AnimacjaLotuDrona(list<std::shared_ptr<Przeszkody>> &p,PzG::LaczeDoGNUPlota &Lacze, double x1, double y1);
 

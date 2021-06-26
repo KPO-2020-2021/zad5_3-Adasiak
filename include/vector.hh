@@ -7,6 +7,7 @@
 #include <iostream>
 #include <cmath>
 #include <initializer_list>
+// #include <dot>
 
 #define PI 3.14159
 #define MIN 0.0000000001
