@@ -49,6 +49,9 @@ class Scena
 
     void add_basic_objects(list<std::shared_ptr<Przeszkody> > &p,PzG::LaczeDoGNUPlota &Lacze,Vector<3> place, double xwth, double ywth,int k,int rodzaj);
 
+    void obob(list<std::shared_ptr<Przeszkody> > &p);
+    void obrotWWW(std::shared_ptr <Przeszkody> &p);
+
    
     // std::string get_nazwa() const;
 

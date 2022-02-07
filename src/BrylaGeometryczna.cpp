@@ -169,3 +169,93 @@ void BrylaGeometryczna::zapis(){
     }
     plik.close();
 }
+
+
+// void BrylaGeometryczna::obob(list<std::shared_ptr<Przeszkody> > &p)
+// {
+//      int i = 0;
+//         for (std::list<std::shared_ptr<Przeszkody>>::iterator a = p.begin(); a != p.end(); a++)
+//         {
+//             cout << i << ": " << (*a)->get_nazwa() << endl;
+//             i++;
+//         }
+//         cout << "podaj numer" << endl;
+
+//         int nr;
+//         cin >> nr;
+//         std::list<std::shared_ptr<Przeszkody>>::iterator a = p.begin();
+//         for (int j = 0; j < nr; j++)
+//         {
+
+//             a++;
+//         }
+
+//         // auto a = p.cbegin();
+
+//         //                   for (unsigned int i = 0; i < p.size(); i++)
+//         //                   {
+
+//         //                     // if (czy_kolizja(*a))
+//         //                     {
+//         //                       // std::cout << a <<std::endl;
+//         //                       std::cout << (*a)->get_nazwa() << endl;
+//         //                     //   kolizja = true;
+//         //                       // std::cout << kolizja << std::endl;
+//         //                     }
+//         //                     a++;
+//         //                   }
+
+//         // cout << "podaj numer" << endl;
+
+//         // int nr;
+//         // cin >> nr;
+//         //         for (int j = 0; j < nr; j++)
+//         // {
+
+//         //     a++;
+//         // }
+
+
+//         // double kat;
+//         // cout << "podaj kat" << endl;
+//         // cin>>kat;
+//         obrotWWW(*a);
+        
+//         // p.erase(a);
+// }
+
+
+
+
+
+void BrylaGeometryczna::obrotWW(/*std::shared_ptr <Przeszkody> &p*/)
+{
+    // double kat;
+    cout << "podaj kat" << endl;
+    // cin>>kat;
+        Vector<3> v;
+        // cin>>v;
+        v[0]=-50;
+        v[1]=-50;
+    // tmp= pkt1[0];
+    // for (int i = 0; i < (int)pkt1.size(); i++)
+    // {
+    //     pkt1[i] = (macierzobrotZ(kat)*((pkt1[i] - tmp))) + tmp  ;
+    // }
+    // cout << "cosiek"<<pkt1[0] << endl;
+    // zapis();
+        for (int i = 0; i < (int)pkt1.size(); i++)
+    {
+        pkt1[i] = macierzobrotZ(katOZ)*(macierzobrotX(katOX)*(pkt1[i]))+v;
+    }
+    cout << "cosiek"<<pkt1[0] << endl;
+    
+    zapis();
+
+}
+
+void BrylaGeometryczna::obrotWWW(std::shared_ptr <Przeszkody> &p)
+{
+    std::cout<<"kotek"<<std::endl;
+    p->obrotWW();
+}

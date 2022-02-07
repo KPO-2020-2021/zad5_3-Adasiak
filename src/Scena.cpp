@@ -135,3 +135,46 @@ void Scena::add_basic_objects(list<std::shared_ptr<Przeszkody> > &p,PzG::LaczeDo
     }
 }
 
+
+void Scena::obob(list<std::shared_ptr<Przeszkody> > &p)
+{
+     int i = 0;
+        for (std::list<std::shared_ptr<Przeszkody>>::iterator a = p.begin(); a != p.end(); a++)
+        {
+            cout << i << ": " << (*a)->get_nazwa() << endl;
+            i++;
+        }
+        cout << "podaj numer" << endl;
+
+        int nr;
+        cin >> nr;
+        std::list<std::shared_ptr<Przeszkody>>::iterator a = p.begin();
+        for (int j = 0; j < nr; j++)
+        {
+
+            a++;
+        }
+
+      
+        obrotWWW(*a);
+
+        for(list<shared_ptr<Przeszkody> >::const_iterator i=p.begin(); i!= p.end(); i++)
+        {
+                // std::cout<<(*i)->wez_srodek()<<std::endl;
+                (*i)->zapis();
+                        // Lacze.DodajNazwePliku((*i)->get_nazwa().c_str());
+                        
+        }
+        
+}
+
+
+void Scena::obrotWWW(std::shared_ptr <Przeszkody> &p)
+{
+    std::cout<< (p)->wez_srodek()<<std::endl;
+    std::cout<<"kotek"<<std::endl;
+    p->obrotWW();
+    p->zapis();
+    std::cout<< (p)->wez_srodek()<<std::endl;
+    // return *p->obrotWW();
+}

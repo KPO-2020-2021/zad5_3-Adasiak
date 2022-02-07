@@ -251,10 +251,13 @@ int main()
        
        // Predator.obrot(90);
        // Pudzianowski.obrot(90);
-       double q,w;
-       q=w=100;
-       
-       Predator.AnimacjaLotuDrona(p,Lacze,q,w);
+       // double q,w;
+       // q=w=100;
+              // BrylaGeometryczna k;
+              // k.obob(p);
+              dno.obob(p);
+              dno.zapis();
+       // Predator.AnimacjaLotuDrona(p,Lacze,q,w);
        // Pudzianowski.AnimacjaLotuDrona(Lacze,a,b);
 
        // double kitek=50;

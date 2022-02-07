@@ -20,5 +20,7 @@ public:
     virtual Vector<3> wez_srodek() =0 ;
     virtual double promien()=0;
     virtual double wez_promien()=0;
+    virtual void obrotWW(/*std::shared_ptr <Przeszkody> &p*/)=0;
+    virtual void obrotWWW(std::shared_ptr <Przeszkody> &p) =0;
 };
 

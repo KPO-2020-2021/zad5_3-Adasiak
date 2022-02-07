@@ -167,6 +167,7 @@ void Dron::ruch(Vector<3> droga, double katOZ, double katOY)
     czubek[1]->zapis();
 
     korpus1->zapis();
+    
 
     Dron::dwojka = droga + Dron::dwojka;
   }

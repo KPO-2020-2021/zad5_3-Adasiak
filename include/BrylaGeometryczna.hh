@@ -61,6 +61,10 @@ public:
     // bool czy_kolizja(std::shared_ptr <Przeszkody> p) const;
      double wez_promien(){return bpromien;}
      
+    //  void obob(list<std::shared_ptr<Przeszkody> > &p);
+     void obrotWW(/*std::shared_ptr <Przeszkody> &p*/);
+     void obrotWWW(std::shared_ptr <Przeszkody> &p);
+
     void set_srodek(Vector<3> srodek);
         // string nazwa(){ return nazwa_pliku_do_zapisu;}
 
